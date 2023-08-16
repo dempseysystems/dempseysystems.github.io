@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dempsey Corporation - Order Status Search Tool</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+<div class="container mt-5">
+    <h1 class="text-center">Dempsey Corporation</h1>
+    <h3 class="text-center mb-5">Order Status Search Tool</h3>
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            {% if shipment %}
+                <div class="card">
+                    <div class="card-header">Search Result</div>
+                    <div class="card-body">
+                        <p><strong>BL Number:</strong> {{ shipment['BL'] }}</p>
+                        <p><strong>Ship Date:</strong> {{ shipment['SHIP_DATE'] }}</p>
+                        <p><strong>Status:</strong> {{ shipment['STATUS'] }}</p>
+                    </div>
+                </div>
+                <a href="/search.html" class="btn btn-primary mt-3">Search Again</a>
+            {% else %}
+                <p>No shipment details available.</p>
+                <a href="/search.html" class="btn btn-primary mt-3">Back to Search</a>
+            {% endif %}
+        </div>
+    </div>
+</div>
+</body>
+</html>
