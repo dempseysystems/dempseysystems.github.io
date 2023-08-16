@@ -38,8 +38,8 @@ def make_connection(database):
 # --------------------------------- ORDHFILE -------------------------------- #
 def export_ordhfile(connection, database_name):
     ordhfile = pd.read_sql(f"select BL, SHIPDT AS SHIP_DATE, DSC2 AS STATUS from ORDHFILE WHERE CLOSED=FALSE", connection)
-    ordhfile.to_csv(f"ordhfile - {database_name}.csv", index=False, encoding="utf8")
-    ordhfile.to_csv(f"shipments.csv", index=False, encoding="utf8")
+    ordhfile.to_csv(r"C:\Users\Mitchell\PycharmProjects\dempseysystems.github.io" + f"\ordhfile - {database_name}.csv", index=False, encoding="utf8")
+    ordhfile.to_csv(r"C:\Users\Mitchell\PycharmProjects\dempseysystems.github.io\shipments.csv", index=False, encoding="utf8")
     return ordhfile
 
 
