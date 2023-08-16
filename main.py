@@ -69,6 +69,8 @@ repo_path = r"C:\Users\Mitchell\PycharmProjects\dempseysystems.github.io"
 commit_message = f"Commit {datetime.datetime.now()}"
 branch = "main"  # Change this if you want to push to a different branch
 commit_and_push(repo_path, commit_message, branch)
+time.sleep(2)
+close_command_prompts()
 
 end_time = time.time()
 print(f"Execution time: {end_time - start_time}")
