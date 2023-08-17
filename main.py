@@ -14,10 +14,12 @@ warnings.simplefilter(action='ignore', category=UserWarning)
 
 start_time = time.time()
 
-DEMPSEY_CORP_DB = r'DRIVER={Microsoft Access Driver (*.mdb, *.accdb)}; DBQ=\\DEMPSEY6\ChempaxVB\CPXDatabases\Dempsey\chempax.mdb; '
-print(DEMPSEY_CORP_DB)
-# DEMPSEY_CORP_DB = r'DRIVER={Microsoft Access Driver (*.mdb, *.accdb)}; ' \
-#                   r'DBQ=\\DEMPSEY6\ChempaxVB\CPXDatabases\Dempsey\chempax.mdb; '
+DEMPSEY_CORP_DB_ENV = os.environ.get('DEMPSEY_CANADA_DB')
+# print(DEMPSEY_CORP_DB)
+DEMPSEY_CORP_DB = r'DRIVER={Microsoft Access Driver (*.mdb, *.accdb)}; ' \
+                  r'DBQ=\\DEMPSEY6\ChempaxVB\CPXDatabases\Dempsey\chempax.mdb; '
+print(DEMPSEY_CORP_DB_ENV == DEMPSEY_CORP_DB)
+
 DEMPSEY_US_DB = r'DRIVER={Microsoft Access Driver (*.mdb, *.accdb)}; ' \
                 r'DBQ=\\DEMPSEY6\ChempaxVB\CPXDatabases\DempseyUS\chempax.mdb; '
 
