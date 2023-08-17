@@ -14,21 +14,9 @@ warnings.simplefilter(action='ignore', category=UserWarning)
 
 start_time = time.time()
 
-DEMPSEY_CORP_DB_ENV = os.environ.get('DEMPSEY_CANADA_DB')
-# print(DEMPSEY_CORP_DB)
-DEMPSEY_CORP_DB = r'DRIVER={Microsoft Access Driver (*.mdb, *.accdb)}; ' \
-                  r'DBQ=\\DEMPSEY6\ChempaxVB\CPXDatabases\Dempsey\chempax.mdb; '
-# Check lengths first
-if len(DEMPSEY_CORP_DB_ENV) != len(DEMPSEY_CORP_DB):
-    print("The strings have different lengths.")
+CANADA_DB = os.environ.get('CANADA_DB')
 
-# Check each character
-for i, (char_env, char_hard) in enumerate(zip(DEMPSEY_CORP_DB_ENV, DEMPSEY_CORP_DB)):
-    if char_env != char_hard:
-        print(f"Difference at position {i}: env='{char_env}' vs hardcoded='{char_hard}'")
-
-DEMPSEY_US_DB = r'DRIVER={Microsoft Access Driver (*.mdb, *.accdb)}; ' \
-                r'DBQ=\\DEMPSEY6\ChempaxVB\CPXDatabases\DempseyUS\chempax.mdb; '
+US_DB = os.environ.get('US_DB')
 
 print("Order Status App")
 
@@ -42,8 +30,6 @@ def close_command_prompts():
 def make_connection(database):
     conn_str = database
     connection = pyodbc.connect(conn_str)
-    # Cursor is an object used to execute SQL statements
-    cursor = connection.cursor()
     return connection
 
 
@@ -70,7 +56,7 @@ def commit_and_push(repo_path, commit_message, branch="main"):
     subprocess.run(["git", "push", "origin", branch], check=True)
 
 # --------------------------------- PROGRAM EXECUTION -------------------------------- #
-database = DEMPSEY_CORP_DB
+database = CANADA_DB
 database_name = "Dempsey Canada"
 
 connection = make_connection(database)
@@ -80,7 +66,10 @@ create_pages.generate_static_pages()
 repo_path = r"C:\Users\Mitchell\PycharmProjects\dempseysystems.github.io"
 commit_message = f"Commit {datetime.datetime.now()}"
 branch = "main"  # Change this if you want to push to a different branch
-commit_and_push(repo_path, commit_message, branch)
+try:
+    commit_and_push(repo_path, commit_message, branch)
+except subprocess.CalledProcessError:
+    print("No changes to push")
 time.sleep(2)
 close_command_prompts()
 
