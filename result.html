@@ -1,36 +1,53 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Dempsey Corporation - Order Status Search Tool</title>
+    <meta charset="UTF-8">
+    <title>Dempsey Corporation - Check Your Order Status</title>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
 <div class="container mt-5">
     <h1 class="text-center">Dempsey Corporation</h1>
-    <h3 class="text-center mb-5">Order Status Search Tool</h3>
+    <h3 class="text-center mb-5">Check Your Order Status</h3>
     <div class="row justify-content-center">
         <div class="col-md-6">
             {% if shipment %}
                 <div class="card">
                     <div class="card-header">Search Result</div>
                     <div class="card-body">
-                        <p><strong>Dempsey Order Number / Numéro de commande Dempsey (BL):</strong> {{ shipment['BL'] }}</p>
-                        <p><strong>Order Submitted / Commande soumise:</strong> {{ shipment['RECEIVED_DATE_cst'] }}</p>
+                        <p><strong>Dempsey Order Number:</strong> BL {{ shipment['BL'] }}</p>
+                        <p><strong>Order Submitted</strong> {{ shipment['RECEIVED_DATE_cst'] }}</p>
                         {% if shipment['shipvia'] == "Customer Pickup" %}
-                            <p><strong>Requested Pickup Date / Date de ramassage demandée:</strong> {{ shipment['DESC1'] }}</p>
-                            <p><strong>Pickup Date / Date de ramassage:</strong> {{ shipment['SHIP_DATE'] }}</p>
+                            <p><strong>Requested Pickup Date:</strong> {{ shipment['DESC1'] }}</p>
+                            <p><strong>Pickup Date:</strong> {{ shipment['SHIP_DATE'] }}</p>
                         {% else %}
-                            <p><strong>Requested Delivery Date / Date de livraison demandée:</strong> {{ shipment['DESC1'] }}</p>
-                            <p><strong>Ship Date / Date d'expédition:</strong> {{ shipment['SHIP_DATE'] }}</p>
+                            <p><strong>Requested Delivery Date:</strong> {{ shipment['DESC1'] }}</p>
+                            <p><strong>Ship Date:</strong> {{ shipment['SHIP_DATE'] }}</p>
                         {% endif %}
 
-                        <p><strong>Status / Statut:</strong> {{ shipment['STATUS'] }}</p>
+                        <p><strong>Status:</strong> {{ shipment['STATUS'] }}</p>
                     </div>
                 </div>
-                <a href="/index.html" class="btn btn-primary mt-3">Search Again</a>
+            <div class="card">
+                    <div class="card-header">Search Result</div>
+                    <div class="card-body">
+                        <p><strong>Numéro de commande Dempsey:</strong> BL {{ shipment['BL'] }}</p>
+                        <p><strong>Commande soumise:</strong> {{ shipment['RECEIVED_DATE_cst'] }}</p>
+                        {% if shipment['shipvia'] == "Customer Pickup" %}
+                            <p><strong>Date de ramassage demandée:</strong> {{ shipment['DESC1'] }}</p>
+                            <p><strong>Date de ramassage:</strong> {{ shipment['SHIP_DATE'] }}</p>
+                        {% else %}
+                            <p><strong>Date de livraison demandée:</strong> {{ shipment['DESC1'] }}</p>
+                            <p><strong>Date d'expédition:</strong> {{ shipment['SHIP_DATE'] }}</p>
+                        {% endif %}
+
+                        <p><strong>Statut:</strong> {{ shipment['STATUS'] }}</p>
+                    </div>
+                </div>
+                <a href="/index.html" class="btn btn-primary mt-3">Search Again / Recherchez à nouveau"</a>
             {% else %}
                 <p>No shipment details available.</p>
-                <a href="/search.html" class="btn btn-primary mt-3">Back to Search</a>
+                <a href="/search.html" class="btn btn-primary mt-3">Back to Search / Retour à la page de recherche</a>
             {% endif %}
         </div>
     </div>
