@@ -24,14 +24,6 @@
             background-color: #0056b3; /* adjust if needed */
         }
 
-        /* Modifying search bar styles */
-        .form-control {
-            background-color: #555; /* slightly lighter than the body background */
-            color: #EFEFEF; /* slightly off-white for text */
-            border: none;
-            border-radius: 5px;
-        }
-
         .form-control::placeholder {
             color: #DDD;
         }
@@ -56,10 +48,13 @@
     <div class="row justify-content-center">
         <div class="col-md-9">
             <form onsubmit="searchBL(); return false;" class="form-inline justify-content-center">
-                <div class="form-group mb-2">
-                    <input type="text" name="bl_number" id="bl_input" class="form-control" placeholder="Enter BL Number / Entrez le numéro de BL" >
+                <div class="mb-2 text-center w-100">
+                    <label for="bl_input" class="d-block mb-2">Enter BL Number / Entrez le numéro de BL</label>
                 </div>
-                <button type="submit" class="btn btn-primary mb-2 ml-2">Search / Rechercher</button>
+                <div class="form-inline justify-content-center">
+                    <input type="text" name="bl_number" id="bl_input" class="form-control mb-2 mr-2">
+                    <button type="submit" class="btn btn-primary mb-2">Search / Rechercher</button>
+                </div>
             </form>
         </div>
         <div id="errorMessage" class="alert alert-danger mt-3" style="display: none;"></div>
