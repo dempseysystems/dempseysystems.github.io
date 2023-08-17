@@ -38,3 +38,5 @@ Traceback (most recent call last):
   File "<__array_function__ internals>", line 180, in where
 TypeError: The DType <class 'numpy.dtype[datetime64]'> could not be promoted by <class 'numpy.dtype[str_]'>. This means that no common DType exists for the given inputs. For example they cannot be stored in a single array unless the dtype is `object`. The full list of DTypes is: (<class 'numpy.dtype[datetime64]'>, <class 'numpy.dtype[str_]'>)
 2023-08-17 13:17:18,681 - INFO - Execution time: 1.3581268787384033
+2023-08-17 13:19:43,636 - INFO - Order Status App started.
+2023-08-17 13:19:57,027 - INFO - Execution time: 13.390718221664429
