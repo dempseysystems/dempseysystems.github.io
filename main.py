@@ -1,14 +1,12 @@
 import pyodbc
 import pandas as pd
 import time
-import numpy as np
-import datetime
 import warnings
-import os
 import create_pages
 import subprocess
 import datetime
 import os
+import logging
 
 warnings.simplefilter(action='ignore', category=UserWarning)
 
@@ -20,8 +18,12 @@ US_DB = os.environ.get('US_DB')
 US_DB_NAME = os.environ.get('US_DB_NAME')
 ORDER_STATUS_APP_DIRECTORY = os.environ.get('ORDER_STATUS_APP_DIRECTORY')
 
-print("Order Status App")
 
+# Logging Configuration
+logging.basicConfig(filename='app.log', level=logging.INFO,
+                    format='%(asctime)s - %(levelname)s - %(message)s')
+
+print("Order Status App")
 
 def close_command_prompts():
     os.system('taskkill /F /IM cmd.exe')
