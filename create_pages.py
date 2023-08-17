@@ -22,7 +22,7 @@ def generate_static_pages(database_name):
             rendered_page = template.render(shipment=row)
 
             # Save the rendered page to a static HTML file named after the BL number
-            with open(ORDER_STATUS_APP_DIRECTORY + f'\{bl_number}.html', 'w') as output_file:
+            with open(ORDER_STATUS_APP_DIRECTORY + f'\{bl_number}.html', 'w', encoding='utf-8') as output_file:
                 output_file.write(rendered_page)
 
 
