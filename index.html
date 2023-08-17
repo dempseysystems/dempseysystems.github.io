@@ -5,28 +5,48 @@
     <title>Dempsey Corporation - Check Your Order Status</title>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <style>
-       body {
-           background-color: #333; /* soft charcoal */
-           color: #FFF; /* white text */
-       }
+        body {
+            background-color: #333; /* soft charcoal */
+            color: #FFF; /* white text */
+        }
 
-       a {
-           color: #EFEFEF; /* slightly off-white for links */
-       }
+        a {
+            color: #EFEFEF; /* slightly off-white for links */
+        }
 
-       .btn.btn-primary {
-           background-color: #007BFF; /* adjust if needed */
-           color: #FFF;
-           border: none;
-       }
+        .btn.btn-primary {
+            background-color: #007BFF; /* adjust if needed */
+            color: #FFF;
+            border: none;
+        }
 
-       .btn.btn-primary:hover, .btn.btn-primary:focus {
-           background-color: #0056b3; /* adjust if needed */
-       }
+        .btn.btn-primary:hover, .btn.btn-primary:focus {
+            background-color: #0056b3; /* adjust if needed */
+        }
 
-       ::placeholder {
-           color: #DDD;
-       }
+        /* Modifying search bar styles */
+        .form-control {
+            background-color: #555; /* slightly lighter than the body background */
+            color: #EFEFEF; /* slightly off-white for text */
+            border: none;
+            border-radius: 5px;
+        }
+
+        .form-control::placeholder {
+            color: #DDD;
+        }
+
+        .form-control:focus {
+            outline: none;
+            box-shadow: none;
+            border: 1px solid #007BFF; /* This color matches the button, adjust if needed */
+        }
+
+        /* Making error message match the theme */
+        #errorMessage {
+            background-color: #e57373; /* a shade of red */
+            color: #FFF;
+        }
     </style>
 </head>
 <body>
