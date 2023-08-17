@@ -18,7 +18,14 @@ DEMPSEY_CORP_DB_ENV = os.environ.get('DEMPSEY_CANADA_DB')
 # print(DEMPSEY_CORP_DB)
 DEMPSEY_CORP_DB = r'DRIVER={Microsoft Access Driver (*.mdb, *.accdb)}; ' \
                   r'DBQ=\\DEMPSEY6\ChempaxVB\CPXDatabases\Dempsey\chempax.mdb; '
-print(DEMPSEY_CORP_DB_ENV == DEMPSEY_CORP_DB)
+# Check lengths first
+if len(DEMPSEY_CORP_DB_ENV) != len(DEMPSEY_CORP_DB):
+    print("The strings have different lengths.")
+
+# Check each character
+for i, (char_env, char_hard) in enumerate(zip(DEMPSEY_CORP_DB_ENV, DEMPSEY_CORP_DB)):
+    if char_env != char_hard:
+        print(f"Difference at position {i}: env='{char_env}' vs hardcoded='{char_hard}'")
 
 DEMPSEY_US_DB = r'DRIVER={Microsoft Access Driver (*.mdb, *.accdb)}; ' \
                 r'DBQ=\\DEMPSEY6\ChempaxVB\CPXDatabases\DempseyUS\chempax.mdb; '
