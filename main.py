@@ -38,7 +38,7 @@ def export_ordhfile(connection, database_name):
     ordhfile = pd.read_sql(f"select BL, SHIPDT AS SHIP_DATE, DSC2 AS STATUS from ORDHFILE WHERE CLOSED=FALSE",
                            connection)
     ordhfile.to_csv(ORDER_STATUS_APP_DIRECTORY + f"\ordhfile - {database_name}.csv", index=False, encoding="utf8")
-    ordhfile.to_csv(ORDER_STATUS_APP_DIRECTORY + "\shipments.csv", index=False,
+    ordhfile.to_csv(ORDER_STATUS_APP_DIRECTORY + f"\shipments - {database_name}.csv", index=False,
                     encoding="utf8")
     return ordhfile
 
@@ -64,7 +64,14 @@ database_name = "Dempsey Canada"
 
 connection = make_connection(database)
 ordhfile = export_ordhfile(connection, database_name)
-create_pages.generate_static_pages()
+create_pages.generate_static_pages(database_name)
+
+database = US_DB
+database_name = "Dempsey US"
+
+connection = make_connection(database)
+ordhfile = export_ordhfile(connection, database_name)
+create_pages.generate_static_pages(database_name)
 
 repo_path = ORDER_STATUS_APP_DIRECTORY
 commit_message = f"Commit {datetime.datetime.now()}"
