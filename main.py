@@ -15,7 +15,9 @@ warnings.simplefilter(action='ignore', category=UserWarning)
 start_time = time.time()
 
 CANADA_DB = os.environ.get('CANADA_DB')
+CANADA_DB_NAME = os.environ.get('CANADA_DB_NAME')
 US_DB = os.environ.get('US_DB')
+US_DB_NAME = os.environ.get('US_DB_NAME')
 ORDER_STATUS_APP_DIRECTORY = os.environ.get('ORDER_STATUS_APP_DIRECTORY')
 
 print("Order Status App")
@@ -60,14 +62,14 @@ def commit_and_push(repo_path, commit_message, branch="main"):
 
 # --------------------------------- PROGRAM EXECUTION -------------------------------- #
 database = CANADA_DB
-database_name = "Dempsey Canada"
+database_name = CANADA_DB_NAME
 
 connection = make_connection(database)
 ordhfile = export_ordhfile(connection, database_name)
 create_pages.generate_static_pages(database_name)
 
 database = US_DB
-database_name = "Dempsey US"
+database_name = US_DB_NAME
 
 connection = make_connection(database)
 ordhfile = export_ordhfile(connection, database_name)
