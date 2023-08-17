@@ -15,6 +15,8 @@
                     <div class="card-header">Search Result</div>
                     <div class="card-body">
                         <p><strong>BL Number:</strong> {{ shipment['BL'] }}</p>
+                        <p><strong>Order Submitted:</strong> {{ shipment['RECEIVED_DATE_cst'] }}</p>
+                        <p><strong>Requested Pickup / Delivery Date:</strong> {{ shipment['DESC1'] }}</p>
                         <p><strong>Ship Date:</strong> {{ shipment['SHIP_DATE'] }}</p>
                         <p><strong>Status:</strong> {{ shipment['STATUS'] }}</p>
                     </div>

@@ -24,3 +24,5 @@ Traceback (most recent call last):
     raise KeyError(key) from err
 KeyError: 'SHIPDT'
 2023-08-17 12:20:48,257 - INFO - Execution time: 1.4014551639556885
+2023-08-17 12:22:04,093 - INFO - Order Status App started.
+2023-08-17 12:22:17,918 - INFO - Execution time: 13.824562311172485
