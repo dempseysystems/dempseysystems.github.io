@@ -54,9 +54,9 @@ def export_ordhfile(connection, database_name):
         ship_via_past = "shipped"
 
     # Format the date columns
-    ordhfile['SHIP_DATE'] = ordhfile['SHIP_DATE'].dt.strftime('%Y-%m-%d')
-    ordhfile['RECEIVED_DATE_cst'] = ordhfile['RECEIVED_DATE_cst'].dt.strftime('%Y-%m-%d')
-    ordhfile['DESC1'] = ordhfile['DESC1'].dt.strftime('%Y-%m-%d')
+    ordhfile['SHIP_DATE'] = ordhfile['SHIP_DATE'].dt.strftime('%Y-%b-%d')
+    ordhfile['RECEIVED_DATE_cst'] = ordhfile['RECEIVED_DATE_cst'].dt.strftime('%Y-%b-%d')
+    ordhfile['DESC1'] = ordhfile['DESC1'].dt.strftime('%Y-%b-%d')
 
     ship_date = ordhfile["SHIP_DATE"].to_list()
     ship_date = ship_date[0]
