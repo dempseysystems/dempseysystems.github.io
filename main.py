@@ -7,6 +7,7 @@ import subprocess
 import datetime
 import os
 import logging
+import numpy as np
 
 warnings.simplefilter(action='ignore', category=UserWarning)
 
@@ -41,7 +42,7 @@ def make_connection(database):
 # --------------------------------- ORDHFILE -------------------------------- #
 def export_ordhfile(connection, database_name):
     ordhfile = pd.read_sql(f"select BL, SHIPDT AS SHIP_DATE, DSC2 AS STATUS, RECEIVED_DATE_cst, DESC1, shipvia from ORDHFILE WHERE CLOSED=FALSE",
-                           connection)
+                           connection, parse_dates=["SHIP_DATE", "RECEIVED_DATE_cst", "DESC1"])
     ship_date = ordhfile["SHIP_DATE"].to_list()
     ship_date = ship_date[0]
 
@@ -53,6 +54,17 @@ def export_ordhfile(connection, database_name):
     else:
         ship_via = "Ship"
         ship_via_past = "shipped"
+
+    # Format the date columns
+    ordhfile['SHIP_DATE'] = ordhfile['SHIP_DATE'].dt.strftime('%Y-%m-%d')
+    ordhfile['RECEIVED_DATE_cst'] = ordhfile['RECEIVED_DATE_cst'].dt.strftime('%Y-%m-%d')
+    ordhfile['DESC1'] = ordhfile['DESC1'].dt.strftime('%Y-%m-%d')
+
+    confirmed_statuses = ["BL Sent", "In Stock", "Invoicing", "BL Received", "Staged", "Revision Required",
+                          "Training - BL Sent", "Training - In Stock", "Training - Invoicing", "Training - BL Received"]
+
+    ordhfile["SHIP_DATE"] = np.where(ordhfile["STATUS"].isin(confirmed_statuses), ordhfile["SHIP_DATE"], "To be "
+                                                                                                         "confirmed")
 
     statuses = {
         "In Stock": f"Your order is in stock. {ship_via} date is confirmed.",
