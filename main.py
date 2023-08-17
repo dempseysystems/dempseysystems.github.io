@@ -92,12 +92,12 @@ def export_ordhfile(connection, database_name):
                             "email and proforma invoice. Your product is not yet in stock. Ship / pickup date is not confirmed.",
         "Awaiting Information": "Your order is being processed. We are awaiting information internally before we can "
                                 "confirm your order. Customer Service will provide an update shortly.",
-        "Invoicing": f"Your order was {ship_via_past} up on {ship_date}. You will receive an invoice shortly.",
+        "Invoicing": f"Your order was {ship_via_past} on {ship_date}. You will receive an invoice shortly.",
         "Revision Required": "Your order has been received by our distribution centre. Ship / pickup date is confirmed.",
-        "Shipped": f"Your order was {ship_via_past} up on {ship_date}. We are awaiting freight charges and "
+        "Shipped": f"Your order was {ship_via_past} on {ship_date}. We are awaiting freight charges and "
                    f"you will receive an invoice shortly.",
         "Cancelled": "Your order has been cancelled.",
-        "Discrepancy": f"Your order was {ship_via_past} up on {ship_date}. You will receive an invoice shortly.",
+        "Discrepancy": f"Your order was {ship_via_past} on {ship_date}. You will receive an invoice shortly.",
         "Margin": f"Your order was {ship_via_past} on {ship_date}. You will receive an invoice shortly.",
         "Shelf Life": f"We require your approval prior to confirming the {ship_via.lower()} date for your order. Please reply"
                       "to the email Customer Service sent you or contact us at customerservice@dempseycorporation.com "
@@ -131,7 +131,7 @@ def export_ordhfile(connection, database_name):
                                 "Customer Service will provide an update shortly.",
         "Training - Invoicing": f"Your order was {ship_via_past} on {ship_date}. You will receive an invoice shortly.",
         "Training - Revision Required": "Your order has been received by our distribution centre. Ship / pickup date is confirmed.",
-        "Training - Shipped": f"Your order was {ship_via_past} up on {ship_date}. We are awaiting freight charges and "
+        "Training - Shipped": f"Your order was {ship_via_past} on {ship_date}. We are awaiting freight charges and "
                    f"you will receive an invoice shortly.",
         "Training - Cancelled": "Your order has been cancelled.",
         "Training - Shelf Life": f"We require your approval prior to confirming the {ship_via.lower()} date for your order. Please reply"
