@@ -43,8 +43,6 @@ def make_connection(database):
 def export_ordhfile(connection, database_name):
     ordhfile = pd.read_sql(f"select BL, SHIPDT AS SHIP_DATE, DSC2 AS STATUS, RECEIVED_DATE_cst, DESC1, shipvia from ORDHFILE WHERE CLOSED=FALSE",
                            connection, parse_dates=["SHIP_DATE", "RECEIVED_DATE_cst", "DESC1"])
-    ship_date = ordhfile["SHIP_DATE"].to_list()
-    ship_date = ship_date[0]
 
     ship_via = ordhfile["shipvia"].to_list()
     ship_via = ship_via[0]
@@ -59,6 +57,9 @@ def export_ordhfile(connection, database_name):
     ordhfile['SHIP_DATE'] = ordhfile['SHIP_DATE'].dt.strftime('%Y-%m-%d')
     ordhfile['RECEIVED_DATE_cst'] = ordhfile['RECEIVED_DATE_cst'].dt.strftime('%Y-%m-%d')
     ordhfile['DESC1'] = ordhfile['DESC1'].dt.strftime('%Y-%m-%d')
+
+    ship_date = ordhfile["SHIP_DATE"].to_list()
+    ship_date = ship_date[0]
 
     confirmed_statuses = ["BL Sent", "In Stock", "Invoicing", "BL Received", "Staged", "Revision Required",
                           "Training - BL Sent", "Training - In Stock", "Training - Invoicing", "Training - BL Received",
