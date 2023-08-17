@@ -61,7 +61,8 @@ def export_ordhfile(connection, database_name):
     ordhfile['DESC1'] = ordhfile['DESC1'].dt.strftime('%Y-%m-%d')
 
     confirmed_statuses = ["BL Sent", "In Stock", "Invoicing", "BL Received", "Staged", "Revision Required",
-                          "Training - BL Sent", "Training - In Stock", "Training - Invoicing", "Training - BL Received"]
+                          "Training - BL Sent", "Training - In Stock", "Training - Invoicing", "Training - BL Received",
+                          "Shipped", "Margin", "Delayed"]
 
     ordhfile["SHIP_DATE"] = np.where(ordhfile["STATUS"].isin(confirmed_statuses), ordhfile["SHIP_DATE"], "To be "
                                                                                                          "confirmed")
