@@ -17,12 +17,13 @@ CANADA_DB_NAME = os.environ.get('CANADA_DB_NAME')
 US_DB = os.environ.get('US_DB')
 US_DB_NAME = os.environ.get('US_DB_NAME')
 ORDER_STATUS_APP_DIRECTORY = os.environ.get('ORDER_STATUS_APP_DIRECTORY')
-
+ORDER_STATUS_APP_SERVER_DIRECTORY = os.environ.get('ORDER_STATUS_APP_SERVER_DIRECTORY')
 
 # Logging Configuration
-logging.basicConfig(filename='app.log', level=logging.INFO,
+logging.basicConfig(filename='order_status_search_tool.log', level=logging.INFO,
                     format='%(asctime)s - %(levelname)s - %(message)s')
 
+logging.info("Order Status App started.")
 print("Order Status App")
 
 def close_command_prompts():
@@ -63,29 +64,39 @@ def commit_and_push(repo_path, commit_message, branch="main"):
 
 
 # --------------------------------- PROGRAM EXECUTION -------------------------------- #
-database = CANADA_DB
-database_name = CANADA_DB_NAME
-
-connection = make_connection(database)
-ordhfile = export_ordhfile(connection, database_name)
-create_pages.generate_static_pages(database_name)
-
-database = US_DB
-database_name = US_DB_NAME
-
-connection = make_connection(database)
-ordhfile = export_ordhfile(connection, database_name)
-create_pages.generate_static_pages(database_name)
-
-repo_path = ORDER_STATUS_APP_DIRECTORY
-commit_message = f"Commit {datetime.datetime.now()}"
-branch = "main"  # Change this if you want to push to a different branch
 try:
+    database = CANADA_DB
+    database_name = CANADA_DB_NAME
+
+    connection = make_connection(database)
+    ordhfile = export_ordhfile(connection, database_name)
+    create_pages.generate_static_pages(database_name)
+
+    database = US_DB
+    database_name = US_DB_NAME
+
+    connection = make_connection(database)
+    ordhfile = export_ordhfile(connection, database_name)
+    create_pages.generate_static_pages(database_name)
+
+    repo_path = ORDER_STATUS_APP_DIRECTORY
+    commit_message = f"Commit {datetime.datetime.now()}"
+    branch = "main"  # Change this if you want to push to a different branch
     commit_and_push(repo_path, commit_message, branch)
+
+    time.sleep(2)
+    close_command_prompts()
+
 except subprocess.CalledProcessError:
     print("No changes to push")
-time.sleep(2)
-close_command_prompts()
+    logging.warning("No changes to push")
 
-end_time = time.time()
-print(f"Execution time: {end_time - start_time}")
+except Exception as e:
+    print("An unexpected error occurred")
+    logging.exception("An unexpected error occurred")
+
+finally:
+    end_time = time.time()
+    print(f"Execution time: {end_time - start_time}")
+    logging.info(f"Execution time: {end_time - start_time}")
+
