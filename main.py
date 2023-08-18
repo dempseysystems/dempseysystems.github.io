@@ -194,17 +194,12 @@ def export_ordhfile(connection, database_name):
         return formatted_date
 
     # Applying the function to the DataFrame columns
-    print(ordhfile_french['SHIP_DATE'].head().apply(lambda x: x.strftime('%Y-%b-%d')))
-
-    sample_date = pd.Timestamp("2023-01-18")
-    formatted_sample_date = sample_date.strftime('%Y-%b-%d')
-    for eng, fr in month_map.items():
-        formatted_sample_date = formatted_sample_date.replace(eng, fr)
-    print(formatted_sample_date)
-
     ordhfile_french['SHIP_DATE'] = ordhfile_french['SHIP_DATE'].apply(format_date_to_french)
     ordhfile_french['RECEIVED_DATE_cst'] = ordhfile_french['RECEIVED_DATE_cst'].apply(format_date_to_french)
     ordhfile_french['DESC1'] = ordhfile_french['DESC1'].apply(format_date_to_french)
+    print(ordhfile_french["SHIP_DATE"].head())
+    print(ordhfile_french["RECEIVED_DATE_cst"].head())
+    print(ordhfile_french["DESC1"].head())
 
     ship_date = ordhfile_french["SHIP_DATE"].to_list()
     ship_date = ship_date[0]
