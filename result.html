@@ -68,17 +68,17 @@
                     <div class="card">
                         <div class="card-header">Résultat de recherche</div>
                             <div class="card-body">
-                                <p><strong>Numéro de commande Dempsey:</strong> BL {{ shipment['BL'] }}</p>
-                                <p><strong>Commande soumise:</strong> {{ shipment['RECEIVED_DATE_cst'] }}</p>
-                                {% if shipment['shipvia'] == "Customer Pickup" %}
-                                    <p><strong>Date de ramassage demandée:</strong> {{ shipment['DESC1'] }}</p>
-                                    <p><strong>Date de ramassage:</strong> {{ shipment['SHIP_DATE'] }}</p>
+                                <p><strong>Numéro de commande Dempsey:</strong> BL {{ shipment2['BL'] }}</p>
+                                <p><strong>Commande soumise:</strong> {{ shipment2['RECEIVED_DATE_cst'] }}</p>
+                                {% if shipment2['shipvia'] == "Customer Pickup" %}
+                                    <p><strong>Date de ramassage demandée:</strong> {{ shipment2['DESC1'] }}</p>
+                                    <p><strong>Date de ramassage:</strong> {{ shipment2['SHIP_DATE'] }}</p>
                                 {% else %}
-                                    <p><strong>Date de livraison demandée:</strong> {{ shipment['DESC1'] }}</p>
-                                    <p><strong>Date d'expédition:</strong> {{ shipment['SHIP_DATE'] }}</p>
+                                    <p><strong>Date de livraison demandée:</strong> {{ shipment2['DESC1'] }}</p>
+                                    <p><strong>Date d'expédition:</strong> {{ shipment2['SHIP_DATE'] }}</p>
                                 {% endif %}
 
-                                <p><strong>Statut:</strong> {{ shipment['STATUS'] }}</p>
+                                <p><strong>Statut:</strong> {{ shipment2['STATUS'] }}</p>
                                 <a href="/index.html" class="btn btn-primary mt-3">Recherchez à nouveau</a>
                             </div>
                     </div>

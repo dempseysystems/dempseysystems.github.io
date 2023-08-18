@@ -162,7 +162,7 @@ def export_ordhfile(connection, database_name):
     if ship_via.lower() == "Customer Pickup".lower():
         ship_via = "de ramassage"
         ship_via_past = "a été ramassée",
-        ship_via_infinitive = "ramasser"
+        ship_via_infinitive = "faire ramasser"
     else:
         ship_via = "d'expédition"
         ship_via_past = "a été ramassée",
@@ -292,8 +292,8 @@ def export_ordhfile(connection, database_name):
                                         "if you have not received an email regarding this order."
     }
 
-    ordhfile.to_csv(ORDER_STATUS_APP_DIRECTORY + f"\ordhfile - {database_name}.csv", index=False, encoding="utf8")
-    ordhfile.to_csv(ORDER_STATUS_APP_DIRECTORY + f"\shipments - {database_name}.csv", index=False,
+    ordhfile.to_csv(ORDER_STATUS_APP_DIRECTORY + f"\ordhfile-french - {database_name}.csv", index=False, encoding="utf8")
+    ordhfile.to_csv(ORDER_STATUS_APP_DIRECTORY + f"\shipments-french - {database_name}.csv", index=False,
                     encoding="utf8")
     return ordhfile
 
