@@ -41,9 +41,27 @@ def make_connection(database):
 
 # --------------------------------- ORDHFILE -------------------------------- #
 def export_ordhfile(connection, database_name):
-    ordhfile = pd.read_sql(f"select BL, SHIPDT AS SHIP_DATE, DSC2 AS STATUS, RECEIVED_DATE_cst, DESC1, shipvia from "
-                           f"ORDHFILE WHERE CLOSED=FALSE AND (DIV='01' OR DIV='06')",
+    ordhfile = pd.read_sql(f"select BL, SHIPDT AS SHIP_DATE, DSC2 AS STATUS, RECEIVED_DATE_cst, DESC1, shipvia, PRT"
+                           f" from ORDHFILE WHERE CLOSED=FALSE AND (DIV='01' OR DIV='06')",
                            connection, parse_dates=["SHIP_DATE", "RECEIVED_DATE_cst", "DESC1"])
+
+    # Replacements to apply to both english and french dataframes
+    # Current Date
+    today = pd.Timestamp.now().normalize()
+    # Condition 1 - Past due orders on credit hold
+    mask1 = (ordhfile['SHIP_DATE'] <= today) & \
+            (ordhfile['PRT'] == 'X') & \
+            (ordhfile['STATUS'].isin(['BL Sent', 'In Stock', 'Direct']))
+    ordhfile.loc[mask1, 'STATUS'] = 'Credit Hold'
+
+    # Condition 2 - Separate delayed pickups and shipments
+    mask2 = (ordhfile['shipvia'].str.lower() == "customer pickup") & \
+            (ordhfile['STATUS'] == 'Delayed')
+    ordhfile.loc[mask2, 'STATUS'] = 'Delayed Pickup'
+
+    mask3 = ~mask2 & (ordhfile['STATUS'] == 'Delayed')
+    ordhfile.loc[mask3, 'STATUS'] = 'Delayed Shipment'
+
     ordhfile_french = ordhfile.copy(deep=True)
 
     ship_via = ordhfile["shipvia"].to_list()
@@ -73,9 +91,11 @@ def export_ordhfile(connection, database_name):
     statuses = {
         "In Stock": f"Your order is in stock. {ship_via} date is confirmed.",
         "BL Sent": f"Your order is in stock. {ship_via} date is confirmed.",
+        "Credit Hold": "Your order has not yet been released. Please contact "
+                       "dave@dempseycorporation.com",
         "BL Received": f"Your order has been received by our distribution centre. {ship_via} date is confirmed.",
         "Staged": f"Your order has been staged by our distribution centre. {ship_via} date is confirmed.",
-        "Delayed": f"Our distribution centre has advised that your order has not yet been picked up.", # Need to adjust for carriers
+        "Delayed Pickup": f"Our distribution centre has advised that your order has not yet been picked up.", # Need to adjust for carriers
         "ETA": f"Your order is not yet in stock. Customer service will advise once product has been received. {ship_via} date is not confirmed.",
         "Partial ETA - RR": "One or more products on your order are not yet in stock. Please reply to Customer Service to"
                             f"confirm if you would like to split the order or wait to {ship_via.lower()} complete.",
@@ -204,9 +224,12 @@ def export_ordhfile(connection, database_name):
     ordhfile_french["SHIP_DATE"] = np.where(ordhfile_french["STATUS"].isin(confirmed_statuses),
                                             ordhfile_french["SHIP_DATE"], "À confirmer")
 
+
     french_statuses = {
         "In Stock": f"Votre commande est en stock. La date {ship_via} est confirmée.",
         "BL Sent": f"Votre commande est en stock. La date {ship_via} est confirmée.",
+        "Credit Hold": "Votre commande n'a pas encore été relâchée. Veuillez contacter "
+                       "dave@@dempseycorporation.com.",
         "BL Received": f"Votre commande a été reçu par notre centre de distribution. La date {ship_via} est confirmée.",
         "Staged": f"Votre commande a été préparée par notre centre de distribution. La date {ship_via} est confirmée.",
         "Delayed": f"Notre centre de distribution nous a informé que votre commande n'a pas encore été ramassée.",
@@ -221,11 +244,11 @@ def export_ordhfile(connection, database_name):
         "Partial ETA": f"Un ou plusieurs produits de votre commande ne sont pas encore en stock. Le Service Clients "
                        f"vous informera si nous ne pouvons pas respecter votre date demandée de {ship_via.lower()}.",
         "Pending": f"Votre commande a été reçue par notre centre de distribution. Le produit sera réceptionné en "
-                   f"urgence dès son arrivée. La date de {ship_via.lower()} reste provisoire.",
+                   f"urgence dès son arrivée. La date {ship_via.lower()} reste provisoire.",
         "Direct": "Votre commande a été passée auprès de notre fournisseur. Date de livraison / de retrait à "
                   "confirmer.",
         "TBA": "Selon vos instructions, nous avons mis cette commande en attente. Veuillez contacter "
-               "customerservice@dempseycorporation.com si vous souhaitez libérer la commande.",
+               "serviceclientele@dempseycorporation.com si vous souhaitez libérer la commande.",
         "Awaiting Payment": "Votre commande nécessite un prépaiement. Veuillez vous référer aux instructions dans "
                             "votre e-mail de confirmation de commande et dans la facture proforma. La date "
                             "d'expédition / de retrait n'est pas confirmée.",
@@ -244,52 +267,62 @@ def export_ordhfile(connection, database_name):
         "Discrepancy": f"Votre commande a été {ship_via_past} le {ship_date}. Vous recevrez une facture sous peu.",
         "Margin": f"Votre commande a été {ship_via_past} le {ship_date}. Vous recevrez une facture sous peu.",
         "Shelf Life": f"Nous avons besoin de votre approbation avant de confirmer la date {ship_via.lower()} pour "
-                      f"votre commande. Veuillez répondre à l'e-mail que le Service Clients vous a envoyé ou nous "
-                      f"contacter à customerservice@dempseycorporation.com si vous n'avez pas reçu d'e-mail "
+                      f"votre commande. Veuillez répondre au courriel que Service à la clientèle vous a envoyé ou nous "
+                      f"contacter à serviceclientele@dempseycorporation.com si vous n'avez pas reçu d'e-mail "
                       f"concernant cette commande.",
         "Lot Approval": f"Nous avons besoin de votre approbation avant de confirmer la date de {ship_via.lower()} pour "
                         f"votre commande. Veuillez répondre à l'e-mail que le Service Clients vous a envoyé ou nous "
-                        f"contacter à customerservice@dempseycorporation.com si vous n'avez pas reçu d'e-mail "
+                        f"contacter à serviceclientele@dempseycorporation.com si vous n'avez pas reçu d'e-mail "
                         f"concernant cette commande.",
         "Price Discrepancy": "Le prix sur votre bon de commande ne correspond pas à celui dans nos dossiers. Veuillez "
                              "répondre au courriel que Service à la clientèle vous a envoyé ou nous contacter à "
-                             "customerservice@dempseycorporation.com si vous n'avez pas reçu un courriel concernant "
+                             "serviceclientele@dempseycorporation.com si vous n'avez pas reçu un courriel concernant "
                              "cette commande.",
-        "Training - In Stock": f"Your order is in stock. {ship_via} date is confirmed.",
-        "Training - BL Sent": f"Your order is in stock. {ship_via} date is confirmed.",
-        "Training - BL Received": f"Your order has been received by our distribution centre. {ship_via} date is confirmed.",
-        "Training - ETA": f"Your order is not yet in stock. Customer service will advise once product has been received. {ship_via} date is not confirmed.",
-        "Training - Partial ETA - RR": "One or more products on your order are not yet in stock. Please reply to Customer Service to"
-                                       f"confirm if you would like to split the order or wait to {ship_via.lower()} complete.",
-        "Training - Partial ETA - SC": "One or more products on your order are not yet in stock. As per your instructions, we are " \
-                                       f"waiting to {ship_via.lower()} the order complete.",
-        "Training - Partial ETA": "One or more products on your order are not yet in stock. Customer Service will advise if we "
-                                  f"are unable to meet your requested {ship_via.lower()} date.",
-        "Training - Pending": "Your order has been received by our distribution centre. Product will be rush received as soon as "
-                              f"it arrives. {ship_via} date remains tentative.",
-        "Training - Direct": f"Your order has been placed with our supplier. {ship_via.lower()} date to be confirmed.",
-        "Training - TBA": "As per your instructions, we have placed this order on hold. Please contact "
-                          "customerservice@dempseycorporation.com if you wish to release the order.",
-        "Training - Awaiting Payment": "Your order requires pre-payment. Please refer to instructions in your order confirmation"
-                                       f"email and proforma invoice. {ship_via} date is not confirmed.",
-        "Training - ETA/Awaiting Payment": "Your order requires pre-payment. Please refer to instructions in your order confirmation"
-                                           "email and proforma invoice. Your product is not yet in stock. Ship / pickup date is not confirmed.",
-        "Training - Awaiting Information": "We are awaiting information internally before we can confirm your order. "
-                                           "Customer Service will provide an update shortly.",
-        "Training - Invoicing": f"Your order was {ship_via_past} on {ship_date}. You will receive an invoice shortly.",
-        "Training - Revision Required": "Your order has been received by our distribution centre. Ship / pickup date is confirmed.",
-        "Training - Shipped": f"Your order was {ship_via_past} on {ship_date}. We are awaiting freight charges and "
-                              f"you will receive an invoice shortly.",
-        "Training - Cancelled": "Your order has been cancelled.",
-        "Training - Shelf Life": f"We require your approval prior to confirming the {ship_via.lower()} date for your order. Please reply"
-                                 "to the email Customer Service sent you or contact us at customerservice@dempseycorporation.com "
-                                 "if you have not received an email regarding this order.",
-        "Training - Lot Approval": f"We require your approval prior to confirming the {ship_via.lower()} for your order. Please reply"
-                                   "to the email Customer Service sent you or contact us at customerservice@dempseycorporation.com "
-                                   "if you have not received an email regarding this order.",
-        "Training - Price Discrepancy": "The price on your purchase order does not match our records. Please reply"
-                                        "to the email Customer Service sent you or contact us at customerservice@dempseycorporation.com "
-                                        "if you have not received an email regarding this order."
+        "Training - In Stock": f"Votre commande est en stock. La date {ship_via} est confirmée.",
+        "Training - BL Sent": f"Votre commande est en stock. La date {ship_via} est confirmée.",
+        "Training - BL Received": f"Votre commande a été reçu par notre centre de distribution. La date {ship_via} est confirmée.",
+        "Training - Staged": f"Votre commande a été préparée par notre centre de distribution. La date {ship_via} est confirmée.",
+        "Training - Delayed": f"Notre centre de distribution nous a informé que votre commande n'a pas encore été ramassée.",
+        # Need to adjust for carriers
+        "Training - ETA": f"Votre commande n'est pas encore en stock. Service à la clientèle vous informera dès que le produit "
+               f"sera reçu. La date{ship_via} n'est pas confirmée.",
+        "Training - Partial ETA - RR": f"Un ou plusieurs produits de votre commande ne sont pas encore en stock. Veuillez répondre"
+                            f" au Service à la clientèle pour confirmer si vous souhaitez séparer la commande ou attendre "
+                            f"pour {ship_via_infinitive} au complet.",
+        "Training - Partial ETA - SC": "Un ou plusieurs produits de votre commande ne sont pas encore en stock. Selon vos "
+                            "instructions, nous attendons pour expédier la commande au complet.",
+        "Training - Partial ETA": f"Un ou plusieurs produits de votre commande ne sont pas encore en stock. Le Service Clients "
+                       f"vous informera si nous ne pouvons pas respecter votre date demandée de {ship_via.lower()}.",
+        "Training - Pending": f"Votre commande a été reçue par notre centre de distribution. Le produit sera réceptionné en "
+                   f"urgence dès son arrivée. La date {ship_via.lower()} reste provisoire.",
+        "Training - Direct": "Votre commande a été passée auprès de notre fournisseur. Date de livraison / de retrait à "
+                  "confirmer.",
+        "Training - TBA": "Selon vos instructions, nous avons mis cette commande en attente. Veuillez contacter "
+               "serviceclientele@dempseycorporation.com si vous souhaitez libérer la commande.",
+        "Training - Awaiting Payment": "Votre commande nécessite un prépaiement. Veuillez vous référer aux instructions dans "
+                            "votre e-mail de confirmation de commande et dans la facture proforma. La date "
+                            "d'expédition / de retrait n'est pas confirmée.",
+        "Training - ETA/Awaiting Payment": "Votre commande nécessite un prépaiement. Veuillez vous référer aux instructions dans "
+                                "votre e-mail de confirmation de commande et dans la facture proforma. Votre produit "
+                                "n'est pas encore en stock. La date d'expédition / de retrait n'est pas confirmée.",
+        "Training - Awaiting Information": "Votre commande est en cours de traitement. Nous attendons des informations en "
+                                "interne avant de pouvoir confirmer votre commande. Le Service Clients fournira une "
+                                "mise à jour sous peu.",
+        "Training - Shipped": f"Votre commande a été {ship_via_past} le {ship_date}. Nous attendons les frais de transport et "
+                   f"vous recevrez une facture sous peu.",
+        "Training - Cancelled": "Votre commande a été annulée.",
+        "Training - Shelf Life": f"Nous avons besoin de votre approbation avant de confirmer la date {ship_via.lower()} pour "
+                      f"votre commande. Veuillez répondre au courriel que Service à la clientèle vous a envoyé ou nous "
+                      f"contacter à serviceclientele@dempseycorporation.com si vous n'avez pas reçu d'e-mail "
+                      f"concernant cette commande.",
+        "Training - Lot Approval": f"Nous avons besoin de votre approbation avant de confirmer la date de {ship_via.lower()} pour "
+                        f"votre commande. Veuillez répondre à l'e-mail que le Service Clients vous a envoyé ou nous "
+                        f"contacter à serviceclientele@dempseycorporation.com si vous n'avez pas reçu d'e-mail "
+                        f"concernant cette commande.",
+        "Training - Price Discrepancy": "Le prix sur votre bon de commande ne correspond pas à celui dans nos dossiers. Veuillez "
+                             "répondre au courriel que Service à la clientèle vous a envoyé ou nous contacter à "
+                             "serviceclientele@dempseycorporation.com si vous n'avez pas reçu un courriel concernant "
+                             "cette commande.",
     }
 
     # Replace the statuses in the dataframe using the dictionary
