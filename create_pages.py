@@ -31,7 +31,6 @@ def generate_static_pages(database_name):
                 output_file.write(rendered_page)
 
 
-
 # Call the function to generate static pages
 # generate_static_pages()
 
