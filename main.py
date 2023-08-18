@@ -292,6 +292,9 @@ def export_ordhfile(connection, database_name):
                                         "if you have not received an email regarding this order."
     }
 
+    # Replace the statuses in the dataframe using the dictionary
+    ordhfile_french['STATUS'] = ordhfile_french['STATUS'].replace(statuses)
+
     ordhfile_french.to_csv(ORDER_STATUS_APP_DIRECTORY + f"\ordhfile-french - {database_name}.csv", index=False, encoding="utf8")
     ordhfile_french.to_csv(ORDER_STATUS_APP_DIRECTORY + f"\shipments-french - {database_name}.csv", index=False,
                     encoding="utf8")
