@@ -12,8 +12,8 @@ env = Environment(loader=FileSystemLoader(''))
 
 
 def generate_static_pages(database_name):
-    with open(ORDER_STATUS_APP_DIRECTORY + f'\shipments - {database_name}.csv', 'r') as file1, \
-         open(ORDER_STATUS_APP_DIRECTORY + f'\shipments-french - {database_name}.csv', 'r') as file2:
+    with open(ORDER_STATUS_APP_DIRECTORY + f'\shipments - {database_name}.csv', 'r', encoding='utf-8') as file1, \
+         open(ORDER_STATUS_APP_DIRECTORY + f'\shipments-french - {database_name}.csv', 'r', encoding='utf-8') as file2:
 
         reader1 = csv.DictReader(file1)
         reader2 = csv.DictReader(file2)

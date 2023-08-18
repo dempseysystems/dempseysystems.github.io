@@ -197,9 +197,6 @@ def export_ordhfile(connection, database_name):
     ordhfile_french['SHIP_DATE'] = ordhfile_french['SHIP_DATE'].apply(format_date_to_french)
     ordhfile_french['RECEIVED_DATE_cst'] = ordhfile_french['RECEIVED_DATE_cst'].apply(format_date_to_french)
     ordhfile_french['DESC1'] = ordhfile_french['DESC1'].apply(format_date_to_french)
-    print(ordhfile_french["SHIP_DATE"].head())
-    print(ordhfile_french["RECEIVED_DATE_cst"].head())
-    print(ordhfile_french["DESC1"].head())
 
     ship_date = ordhfile_french["SHIP_DATE"].to_list()
     ship_date = ship_date[0]
