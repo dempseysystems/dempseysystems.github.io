@@ -245,7 +245,7 @@ def export_ordhfile(connection, database_name):
                             "votre transporteur à la date que nous avions demandée. Nous avons relancé le transporteur "
                             "et ils viendront récupérer dès que possible.",
         "ETA": f"Votre commande n'est pas encore en stock. Service à la clientèle vous informera dès que le produit "
-               f"sera reçu. La date{ship_via} n'est pas confirmée.",
+               f"sera reçu. La date {ship_via} n'est pas confirmée.",
         "Partial ETA - RR": f"Un ou plusieurs produits de votre commande ne sont pas encore en stock. Veuillez répondre"
                             f" au Service à la clientèle pour confirmer si vous souhaitez séparer la commande ou attendre "
                             f"pour {ship_via_infinitive} au complet.",
@@ -261,16 +261,16 @@ def export_ordhfile(connection, database_name):
                "serviceclientele@dempseycorporation.com si vous souhaitez libérer la commande.",
         "Awaiting Payment": "Votre commande nécessite un prépaiement. Veuillez vous référer aux instructions dans "
                             "votre e-mail de confirmation de commande et dans la facture proforma. La date "
-                            "d'expédition / de retrait n'est pas confirmée.",
+                            f"{ship_via} n'est pas confirmée.",
         "ETA/Awaiting Payment": "Votre commande nécessite un prépaiement. Veuillez vous référer aux instructions dans "
                                 "votre e-mail de confirmation de commande et dans la facture proforma. Votre produit "
-                                "n'est pas encore en stock. La date d'expédition / de retrait n'est pas confirmée.",
+                                f"n'est pas encore en stock. La date {ship_via} n'est pas confirmée.",
         "Awaiting Information": "Votre commande est en cours de traitement. Nous attendons des informations en "
                                 "interne avant de pouvoir confirmer votre commande. Le Service Clients fournira une "
                                 "mise à jour sous peu.",
         "Invoicing": f"Votre commande a été {ship_via_past} le {ship_date}. Vous recevrez une facture sous peu.",
-        "Revision Required": "Votre commande a été reçue par notre centre de distribution. La date d'expédition / de "
-                             "retrait est confirmée.",
+        "Revision Required": f"Votre commande a été reçue par notre centre de distribution. La date {ship_via} "
+                             " est confirmée.",
         "Shipped": f"Votre commande a été {ship_via_past} le {ship_date}. Nous attendons les frais de transport et "
                    f"vous recevrez une facture sous peu.",
         "Cancelled": "Votre commande a été annulée.",
@@ -280,7 +280,7 @@ def export_ordhfile(connection, database_name):
                       f"votre commande. Veuillez répondre au courriel que Service à la clientèle vous a envoyé ou nous "
                       f"contacter à serviceclientele@dempseycorporation.com si vous n'avez pas reçu d'e-mail "
                       f"concernant cette commande.",
-        "Lot Approval": f"Nous avons besoin de votre approbation avant de confirmer la date de {ship_via.lower()} pour "
+        "Lot Approval": f"Nous avons besoin de votre approbation avant de confirmer la date {ship_via.lower()} pour "
                         f"votre commande. Veuillez répondre à l'e-mail que le Service Clients vous a envoyé ou nous "
                         f"contacter à serviceclientele@dempseycorporation.com si vous n'avez pas reçu d'e-mail "
                         f"concernant cette commande.",
@@ -295,7 +295,7 @@ def export_ordhfile(connection, database_name):
         "Training - Delayed": f"Notre centre de distribution nous a informé que votre commande n'a pas encore été ramassée.",
         # Need to adjust for carriers
         "Training - ETA": f"Votre commande n'est pas encore en stock. Service à la clientèle vous informera dès que le produit "
-               f"sera reçu. La date{ship_via} n'est pas confirmée.",
+               f"sera reçu. La date {ship_via} n'est pas confirmée.",
         "Training - Partial ETA - RR": f"Un ou plusieurs produits de votre commande ne sont pas encore en stock. Veuillez répondre"
                             f" au Service à la clientèle pour confirmer si vous souhaitez séparer la commande ou attendre "
                             f"pour {ship_via_infinitive} au complet.",
@@ -314,7 +314,7 @@ def export_ordhfile(connection, database_name):
                             "d'expédition / de retrait n'est pas confirmée.",
         "Training - ETA/Awaiting Payment": "Votre commande nécessite un prépaiement. Veuillez vous référer aux instructions dans "
                                 "votre e-mail de confirmation de commande et dans la facture proforma. Votre produit "
-                                "n'est pas encore en stock. La date d'expédition / de retrait n'est pas confirmée.",
+                                f"n'est pas encore en stock. La date {ship_via} n'est pas confirmée.",
         "Training - Awaiting Information": "Votre commande est en cours de traitement. Nous attendons des informations en "
                                 "interne avant de pouvoir confirmer votre commande. Le Service Clients fournira une "
                                 "mise à jour sous peu.",
@@ -325,7 +325,7 @@ def export_ordhfile(connection, database_name):
                       f"votre commande. Veuillez répondre au courriel que Service à la clientèle vous a envoyé ou nous "
                       f"contacter à serviceclientele@dempseycorporation.com si vous n'avez pas reçu d'e-mail "
                       f"concernant cette commande.",
-        "Training - Lot Approval": f"Nous avons besoin de votre approbation avant de confirmer la date de {ship_via.lower()} pour "
+        "Training - Lot Approval": f"Nous avons besoin de votre approbation avant de confirmer la date {ship_via.lower()} pour "
                         f"votre commande. Veuillez répondre à l'e-mail que le Service Clients vous a envoyé ou nous "
                         f"contacter à serviceclientele@dempseycorporation.com si vous n'avez pas reçu d'e-mail "
                         f"concernant cette commande.",
