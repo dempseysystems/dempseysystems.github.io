@@ -194,9 +194,9 @@ def export_ordhfile(connection, database_name):
         return formatted_date
 
     # Applying the function to the DataFrame columns
-    print(ordhfile_french['SHIP_DATE'].dtypes)
-    print(ordhfile_french['RECEIVED_DATE_cst'].dtypes)
-    print(ordhfile_french['DESC1'].dtypes)
+    print(ordhfile_french['SHIP_DATE'].head())
+    print(ordhfile_french['RECEIVED_DATE_cst'].head())
+    print(ordhfile_french['DESC1'].head())
     ordhfile_french['SHIP_DATE'] = ordhfile_french['SHIP_DATE'].apply(format_date_to_french)
     ordhfile_french['RECEIVED_DATE_cst'] = ordhfile_french['RECEIVED_DATE_cst'].apply(format_date_to_french)
     ordhfile_french['DESC1'] = ordhfile_french['DESC1'].apply(format_date_to_french)
