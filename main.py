@@ -165,8 +165,8 @@ def export_ordhfile(connection, database_name):
         ship_via_infinitive = "faire ramasser"
     else:
         ship_via = "d'expédition"
-        ship_via_past = "a été ramassée",
-        ship_via_infinitive = "ramasser"
+        ship_via_past = "a été expédiée",
+        ship_via_infinitive = "expédier"
 
     # Dictionary for English to French month abbreviation mapping
     month_map = {
@@ -194,6 +194,9 @@ def export_ordhfile(connection, database_name):
         return formatted_date
 
     # Applying the function to the DataFrame columns
+    print(ordhfile_french['SHIP_DATE'].dtypes)
+    print(ordhfile_french['RECEIVED_DATE_cst'].dtypes)
+    print(ordhfile_french['DESC1'].dtypes)
     ordhfile_french['SHIP_DATE'] = ordhfile_french['SHIP_DATE'].apply(format_date_to_french)
     ordhfile_french['RECEIVED_DATE_cst'] = ordhfile_french['RECEIVED_DATE_cst'].apply(format_date_to_french)
     ordhfile_french['DESC1'] = ordhfile_french['DESC1'].apply(format_date_to_french)
@@ -214,8 +217,8 @@ def export_ordhfile(connection, database_name):
         "ETA": f"Votre commande n'est pas encore en stock. Service à la clientèle vous informera dès que le produit "
                f"sera reçu. La date{ship_via} n'est pas confirmée.",
         "Partial ETA - RR": f"Un ou plusieurs produits de votre commande ne sont pas encore en stock. Veuillez répondre"
-                            f" au Service Clients pour confirmer si vous souhaitez séparer la commande ou attendre "
-                            f"pour {ship_via.lower()} au complet.",
+                            f" au Service à la clientèle pour confirmer si vous souhaitez séparer la commande ou attendre "
+                            f"pour {ship_via_infinitive} au complet.",
         "Partial ETA - SC": "Un ou plusieurs produits de votre commande ne sont pas encore en stock. Selon vos "
                             "instructions, nous attendons pour expédier la commande au complet.",
         "Partial ETA": f"Un ou plusieurs produits de votre commande ne sont pas encore en stock. Le Service Clients "
@@ -243,7 +246,7 @@ def export_ordhfile(connection, database_name):
         "Cancelled": "Votre commande a été annulée.",
         "Discrepancy": f"Votre commande a été {ship_via_past} le {ship_date}. Vous recevrez une facture sous peu.",
         "Margin": f"Votre commande a été {ship_via_past} le {ship_date}. Vous recevrez une facture sous peu.",
-        "Shelf Life": f"Nous avons besoin de votre approbation avant de confirmer la date de {ship_via.lower()} pour "
+        "Shelf Life": f"Nous avons besoin de votre approbation avant de confirmer la date {ship_via.lower()} pour "
                       f"votre commande. Veuillez répondre à l'e-mail que le Service Clients vous a envoyé ou nous "
                       f"contacter à customerservice@dempseycorporation.com si vous n'avez pas reçu d'e-mail "
                       f"concernant cette commande.",
@@ -251,9 +254,9 @@ def export_ordhfile(connection, database_name):
                         f"votre commande. Veuillez répondre à l'e-mail que le Service Clients vous a envoyé ou nous "
                         f"contacter à customerservice@dempseycorporation.com si vous n'avez pas reçu d'e-mail "
                         f"concernant cette commande.",
-        "Price Discrepancy": "Le prix sur votre bon de commande ne correspond pas à nos registres. Veuillez "
-                             "répondre à l'e-mail que le Service Clients vous a envoyé ou nous contacter à "
-                             "customerservice@dempseycorporation.com si vous n'avez pas reçu d'e-mail concernant "
+        "Price Discrepancy": "Le prix sur votre bon de commande ne correspond pas à celui dans nos dossiers. Veuillez "
+                             "répondre au courriel que Service à la clientèle vous a envoyé ou nous contacter à "
+                             "customerservice@dempseycorporation.com si vous n'avez pas reçu un courriel concernant "
                              "cette commande.",
         "Training - In Stock": f"Your order is in stock. {ship_via} date is confirmed.",
         "Training - BL Sent": f"Your order is in stock. {ship_via} date is confirmed.",
