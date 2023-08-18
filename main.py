@@ -161,10 +161,12 @@ def export_ordhfile(connection, database_name):
     ship_via = ship_via[0]
     if ship_via.lower() == "Customer Pickup".lower():
         ship_via = "de ramassage"
-        ship_via_past = "a été ramassée"
+        ship_via_past = "a été ramassée",
+        ship_via_infinitive = "ramasser"
     else:
         ship_via = "d'expédition"
-        ship_via_past = "a été ramassée"
+        ship_via_past = "a été ramassée",
+        ship_via_infinitive = "ramasser"
 
     # Dictionary for English to French month abbreviation mapping
     month_map = {
@@ -211,39 +213,48 @@ def export_ordhfile(connection, database_name):
         # Need to adjust for carriers
         "ETA": f"Votre commande n'est pas encore en stock. Service à la clientèle vous informera dès que le produit "
                f"sera reçu. La date{ship_via} n'est pas confirmée.",
-        "Partial ETA - RR": "One or more products on your order are not yet in stock. Please reply to Customer Service to"
-                            f"confirm if you would like to split the order or wait to {ship_via.lower()} complete.",
-        "Partial ETA - SC": "One or more products on your order are not yet in stock. As per your instructions, we are " \
-                            "waiting to ship the order complete.",
-        "Partial ETA": "One or more products on your order are not yet in stock. Customer Service will advise if we "
-                       f"are unable to meet your requested {ship_via.lower()} date.",
-        "Pending": "Your order has been received by our distribution centre. Product will be rush received as soon as "
-                   f"it arrives. {ship_via.lower()} date remains tentative.",
-        "Direct": "Your order has been placed with our supplier. Delivery / pickup date to be confirmed.",
-        "TBA": "As per your instructions, we have placed this order on hold. Please contact "
-               "customerservice@dempseycorporation.com if you wish to release the order.",
-        "Awaiting Payment": "Your order requires prepayment. Please refer to instructions in your order confirmation"
-                            "email and proforma invoice. Ship / pickup date is not confirmed.",
-        "ETA/Awaiting Payment": "Your order requires pre-payment. Please refer to instructions in your order confirmation"
-                                "email and proforma invoice. Your product is not yet in stock. Ship / pickup date is not confirmed.",
-        "Awaiting Information": "Your order is being processed. We are awaiting information internally before we can "
-                                "confirm your order. Customer Service will provide an update shortly.",
-        "Invoicing": f"Your order was {ship_via_past} on {ship_date}. You will receive an invoice shortly.",
-        "Revision Required": "Your order has been received by our distribution centre. Ship / pickup date is confirmed.",
-        "Shipped": f"Your order was {ship_via_past} on {ship_date}. We are awaiting freight charges and "
-                   f"you will receive an invoice shortly.",
-        "Cancelled": "Your order has been cancelled.",
-        "Discrepancy": f"Your order was {ship_via_past} on {ship_date}. You will receive an invoice shortly.",
-        "Margin": f"Your order was {ship_via_past} on {ship_date}. You will receive an invoice shortly.",
-        "Shelf Life": f"We require your approval prior to confirming the {ship_via.lower()} date for your order. Please reply"
-                      "to the email Customer Service sent you or contact us at customerservice@dempseycorporation.com "
-                      "if you have not received an email regarding this order.",
-        "Lot Approval": f"We require your approval prior to confirming the {ship_via.lower()} date for your order. Please reply"
-                        "to the email Customer Service sent you or contact us at customerservice@dempseycorporation.com "
-                        "if you have not received an email regarding this order.",
-        "Price Discrepancy": "The price on your purchase order does not match our records. Please reply"
-                             "to the email Customer Service sent you or contact us at customerservice@dempseycorporation.com "
-                             "if you have not received an email regarding this order.",
+        "Partial ETA - RR": f"Un ou plusieurs produits de votre commande ne sont pas encore en stock. Veuillez répondre"
+                            f" au Service Clients pour confirmer si vous souhaitez séparer la commande ou attendre "
+                            f"pour {ship_via.lower()} au complet.",
+        "Partial ETA - SC": "Un ou plusieurs produits de votre commande ne sont pas encore en stock. Selon vos "
+                            "instructions, nous attendons pour expédier la commande au complet.",
+        "Partial ETA": f"Un ou plusieurs produits de votre commande ne sont pas encore en stock. Le Service Clients "
+                       f"vous informera si nous ne pouvons pas respecter votre date demandée de {ship_via.lower()}.",
+        "Pending": f"Votre commande a été reçue par notre centre de distribution. Le produit sera réceptionné en "
+                   f"urgence dès son arrivée. La date de {ship_via.lower()} reste provisoire.",
+        "Direct": "Votre commande a été passée auprès de notre fournisseur. Date de livraison / de retrait à "
+                  "confirmer.",
+        "TBA": "Selon vos instructions, nous avons mis cette commande en attente. Veuillez contacter "
+               "customerservice@dempseycorporation.com si vous souhaitez libérer la commande.",
+        "Awaiting Payment": "Votre commande nécessite un prépaiement. Veuillez vous référer aux instructions dans "
+                            "votre e-mail de confirmation de commande et dans la facture proforma. La date "
+                            "d'expédition / de retrait n'est pas confirmée.",
+        "ETA/Awaiting Payment": "Votre commande nécessite un prépaiement. Veuillez vous référer aux instructions dans "
+                                "votre e-mail de confirmation de commande et dans la facture proforma. Votre produit "
+                                "n'est pas encore en stock. La date d'expédition / de retrait n'est pas confirmée.",
+        "Awaiting Information": "Votre commande est en cours de traitement. Nous attendons des informations en "
+                                "interne avant de pouvoir confirmer votre commande. Le Service Clients fournira une "
+                                "mise à jour sous peu.",
+        "Invoicing": f"Votre commande a été {ship_via_past} le {ship_date}. Vous recevrez une facture sous peu.",
+        "Revision Required": "Votre commande a été reçue par notre centre de distribution. La date d'expédition / de "
+                             "retrait est confirmée.",
+        "Shipped": f"Votre commande a été {ship_via_past} le {ship_date}. Nous attendons les frais de transport et "
+                   f"vous recevrez une facture sous peu.",
+        "Cancelled": "Votre commande a été annulée.",
+        "Discrepancy": f"Votre commande a été {ship_via_past} le {ship_date}. Vous recevrez une facture sous peu.",
+        "Margin": f"Votre commande a été {ship_via_past} le {ship_date}. Vous recevrez une facture sous peu.",
+        "Shelf Life": f"Nous avons besoin de votre approbation avant de confirmer la date de {ship_via.lower()} pour "
+                      f"votre commande. Veuillez répondre à l'e-mail que le Service Clients vous a envoyé ou nous "
+                      f"contacter à customerservice@dempseycorporation.com si vous n'avez pas reçu d'e-mail "
+                      f"concernant cette commande.",
+        "Lot Approval": f"Nous avons besoin de votre approbation avant de confirmer la date de {ship_via.lower()} pour "
+                        f"votre commande. Veuillez répondre à l'e-mail que le Service Clients vous a envoyé ou nous "
+                        f"contacter à customerservice@dempseycorporation.com si vous n'avez pas reçu d'e-mail "
+                        f"concernant cette commande.",
+        "Price Discrepancy": "Le prix sur votre bon de commande ne correspond pas à nos registres. Veuillez "
+                             "répondre à l'e-mail que le Service Clients vous a envoyé ou nous contacter à "
+                             "customerservice@dempseycorporation.com si vous n'avez pas reçu d'e-mail concernant "
+                             "cette commande.",
         "Training - In Stock": f"Your order is in stock. {ship_via} date is confirmed.",
         "Training - BL Sent": f"Your order is in stock. {ship_via} date is confirmed.",
         "Training - BL Received": f"Your order has been received by our distribution centre. {ship_via} date is confirmed.",
@@ -279,10 +290,11 @@ def export_ordhfile(connection, database_name):
         "Training - Price Discrepancy": "The price on your purchase order does not match our records. Please reply"
                                         "to the email Customer Service sent you or contact us at customerservice@dempseycorporation.com "
                                         "if you have not received an email regarding this order."
-
     }
 
-
+    ordhfile.to_csv(ORDER_STATUS_APP_DIRECTORY + f"\ordhfile - {database_name}.csv", index=False, encoding="utf8")
+    ordhfile.to_csv(ORDER_STATUS_APP_DIRECTORY + f"\shipments - {database_name}.csv", index=False,
+                    encoding="utf8")
     return ordhfile
 
 
