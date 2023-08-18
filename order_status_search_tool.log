@@ -68,3 +68,24 @@ TypeError: The DType <class 'numpy.dtype[datetime64]'> could not be promoted by 
 2023-08-17 19:42:34,853 - INFO - Execution time: 16.35489511489868
 2023-08-17 19:44:27,909 - INFO - Order Status App started.
 2023-08-17 19:44:37,094 - INFO - Execution time: 9.185646533966064
+2023-08-17 19:56:26,473 - INFO - Order Status App started.
+2023-08-17 19:56:34,678 - INFO - Execution time: 8.205044507980347
+2023-08-18 09:42:27,856 - INFO - Order Status App started.
+2023-08-18 09:42:29,101 - ERROR - An unexpected error occurred
+Traceback (most recent call last):
+  File "C:\Users\Mitchell\PycharmProjects\dempseysystems.github.io\main.py", line 304, in <module>
+    ordhfile = export_ordhfile(connection, database_name)
+  File "C:\Users\Mitchell\PycharmProjects\dempseysystems.github.io\main.py", line 192, in export_ordhfile
+    ordhfile_french['SHIP_DATE'] = ordhfile_french['SHIP_DATE'].apply(format_date_to_french)
+  File "C:\Users\Mitchell\AppData\Local\Programs\Python\Python39\lib\site-packages\pandas\core\series.py", line 4433, in apply
+    return SeriesApply(self, func, convert_dtype, args, kwargs).apply()
+  File "C:\Users\Mitchell\AppData\Local\Programs\Python\Python39\lib\site-packages\pandas\core\apply.py", line 1082, in apply
+    return self.apply_standard()
+  File "C:\Users\Mitchell\AppData\Local\Programs\Python\Python39\lib\site-packages\pandas\core\apply.py", line 1137, in apply_standard
+    mapped = lib.map_infer(
+  File "pandas\_libs\lib.pyx", line 2870, in pandas._libs.lib.map_infer
+  File "C:\Users\Mitchell\PycharmProjects\dempseysystems.github.io\main.py", line 186, in format_date_to_french
+    formatted_date = date.strftime('%Y-%b-%d')
+  File "pandas\_libs\tslibs\nattype.pyx", line 75, in pandas._libs.tslibs.nattype._make_error_func.f
+ValueError: NaTType does not support strftime
+2023-08-18 09:42:29,103 - INFO - Execution time: 1.246567726135254
