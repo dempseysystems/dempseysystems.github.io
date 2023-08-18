@@ -95,7 +95,12 @@ def export_ordhfile(connection, database_name):
                        "dave@dempseycorporation.com",
         "BL Received": f"Your order has been received by our distribution centre. {ship_via} date is confirmed.",
         "Staged": f"Your order has been staged by our distribution centre. {ship_via} date is confirmed.",
-        "Delayed Pickup": f"Our distribution centre has advised that your order has not yet been picked up.", # Need to adjust for carriers
+        "Delayed Pickup": f"Our distribution centre has advised that your order has not yet been picked up. Please "
+                          f"arrange pickup as per the instructions sent to you by Customer Service. If you have not "
+                          f"received your confirmation email, please contact customerservice@dempseycorporation.com",
+        "Delayed Shipment": "Our distribution centre has advised that your order was not picked up by your carrier"
+                            "on the date we requested. We have followed up with the carrier and they will pick up as "
+                            "soon as possible.",
         "ETA": f"Your order is not yet in stock. Customer service will advise once product has been received. {ship_via} date is not confirmed.",
         "Partial ETA - RR": "One or more products on your order are not yet in stock. Please reply to Customer Service to"
                             f"confirm if you would like to split the order or wait to {ship_via.lower()} complete.",
@@ -232,8 +237,13 @@ def export_ordhfile(connection, database_name):
                        "dave@@dempseycorporation.com.",
         "BL Received": f"Votre commande a été reçu par notre centre de distribution. La date {ship_via} est confirmée.",
         "Staged": f"Votre commande a été préparée par notre centre de distribution. La date {ship_via} est confirmée.",
-        "Delayed": f"Notre centre de distribution nous a informé que votre commande n'a pas encore été ramassée.",
-        # Need to adjust for carriers
+        "Delayed Pickup": f"Notre centre de distribution a informé que votre commande n'a pas encore été récupérée. "
+                          f"Veuillez organiser le ramassage selon les instructions envoyées par Service à la clientèle."
+                          f"Si vous n'avez pas reçu votre courriel de confirmation, veuillez contacter "
+                          f"serviceclientele@dempseycorporation.com.",
+        "Delayed Shipment": "Notre centre de distribution nous a informé que votre commande n'a pas été ramassée par "
+                            "votre transporteur à la date que nous avions demandée. Nous avons relancé le transporteur "
+                            "et ils viendront récupérer dès que possible.",
         "ETA": f"Votre commande n'est pas encore en stock. Service à la clientèle vous informera dès que le produit "
                f"sera reçu. La date{ship_via} n'est pas confirmée.",
         "Partial ETA - RR": f"Un ou plusieurs produits de votre commande ne sont pas encore en stock. Veuillez répondre"
@@ -326,7 +336,7 @@ def export_ordhfile(connection, database_name):
     }
 
     # Replace the statuses in the dataframe using the dictionary
-    ordhfile_french['STATUS'] = ordhfile_french['STATUS'].replace(statuses)
+    ordhfile_french['STATUS'] = ordhfile_french['STATUS'].replace(french_statuses)
 
     ordhfile_french.to_csv(ORDER_STATUS_APP_DIRECTORY + f"\ordhfile-french - {database_name}.csv", index=False, encoding="utf8")
     ordhfile_french.to_csv(ORDER_STATUS_APP_DIRECTORY + f"\shipments-french - {database_name}.csv", index=False,
