@@ -89,3 +89,5 @@ Traceback (most recent call last):
   File "pandas\_libs\tslibs\nattype.pyx", line 75, in pandas._libs.tslibs.nattype._make_error_func.f
 ValueError: NaTType does not support strftime
 2023-08-18 09:42:29,103 - INFO - Execution time: 1.246567726135254
+2023-08-18 09:46:18,086 - INFO - Order Status App started.
+2023-08-18 09:46:25,952 - INFO - Execution time: 7.865778923034668

@@ -199,6 +199,9 @@ def export_ordhfile(connection, database_name):
     ship_date = ordhfile_french["SHIP_DATE"].to_list()
     ship_date = ship_date[0]
 
+    ordhfile_french["SHIP_DATE"] = np.where(ordhfile_french["STATUS"].isin(confirmed_statuses),
+                                            ordhfile_french["SHIP_DATE"], "À confirmer")
+
     french_statuses = {
         "In Stock": f"Votre commande est en stock. La date {ship_via} est confirmée.",
         "BL Sent": f"Votre commande est en stock. La date {ship_via} est confirmée.",
