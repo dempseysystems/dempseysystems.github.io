@@ -234,7 +234,7 @@ def export_ordhfile(connection, database_name):
         "In Stock": f"Votre commande est en stock. La date {ship_via} est confirmée.",
         "BL Sent": f"Votre commande est en stock. La date {ship_via} est confirmée.",
         "Credit Hold": "Votre commande n'a pas encore été relâchée. Veuillez contacter "
-                       "dave@@dempseycorporation.com.",
+                       "dave@dempseycorporation.com.",
         "BL Received": f"Votre commande a été reçu par notre centre de distribution. La date {ship_via} est confirmée.",
         "Staged": f"Votre commande a été préparée par notre centre de distribution. La date {ship_via} est confirmée.",
         "Delayed Pickup": f"Notre centre de distribution a informé que votre commande n'a pas encore été récupérée. "
