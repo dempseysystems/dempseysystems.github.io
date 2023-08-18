@@ -295,8 +295,8 @@ def export_ordhfile(connection, database_name):
                                         "if you have not received an email regarding this order."
     }
 
-    ordhfile.to_csv(ORDER_STATUS_APP_DIRECTORY + f"\ordhfile-french - {database_name}.csv", index=False, encoding="utf8")
-    ordhfile.to_csv(ORDER_STATUS_APP_DIRECTORY + f"\shipments-french - {database_name}.csv", index=False,
+    ordhfile_french.to_csv(ORDER_STATUS_APP_DIRECTORY + f"\ordhfile-french - {database_name}.csv", index=False, encoding="utf8")
+    ordhfile_french.to_csv(ORDER_STATUS_APP_DIRECTORY + f"\shipments-french - {database_name}.csv", index=False,
                     encoding="utf8")
     return ordhfile
 
