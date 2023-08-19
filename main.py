@@ -386,6 +386,7 @@ try:
 except subprocess.CalledProcessError:
     print("No changes to push")
     logging.warning("No changes to push")
+    close_command_prompts()
 
 except Exception as e:
     print("An unexpected error occurred")
