@@ -31,6 +31,26 @@ def close_command_prompts():
     os.system('taskkill /F /IM cmd.exe')
 
 
+def read_sql_with_retry(sql_query, connection, max_retries=5, retry_interval=5):
+    retries = 0
+    last_exception = None  # Initialize a variable to store the last exception
+
+    while retries < max_retries:
+        try:
+            result = pd.read_sql(sql_query, connection, parse_dates=["SHIP_DATE", "RECEIVED_DATE_cst", "DESC1"])
+            return result
+        except Exception as e:  # Catch all exceptions here
+            last_exception = e  # Store the exception
+            print(f"Encountered an error: {e}")
+            print(f"Retrying in {retry_interval} seconds...")
+            time.sleep(retry_interval)
+            retries += 1
+
+    # If all retries failed, raise the last error encountered
+    raise last_exception
+
+
+
 # ---------------------- MAKE CONNECTION TO DATABASE ----------------------- #
 
 def make_connection(database):
@@ -41,9 +61,9 @@ def make_connection(database):
 
 # --------------------------------- ORDHFILE -------------------------------- #
 def export_ordhfile(connection, database_name):
-    ordhfile = pd.read_sql(f"select BL, SHIPDT AS SHIP_DATE, DSC2 AS STATUS, RECEIVED_DATE_cst, DESC1, shipvia, PRT"
+    ordhfile = read_sql_with_retry(f"select BL, SHIPDT AS SHIP_DATE, DSC2 AS STATUS, RECEIVED_DATE_cst, DESC1, shipvia, PRT"
                            f" from ORDHFILE WHERE CLOSED=FALSE AND (DIV='01' OR DIV='06')",
-                           connection, parse_dates=["SHIP_DATE", "RECEIVED_DATE_cst", "DESC1"])
+                           connection)
 
     # Replacements to apply to both english and french dataframes
     # Current Date
