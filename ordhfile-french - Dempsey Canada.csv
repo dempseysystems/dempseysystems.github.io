@@ -51,7 +51,7 @@ BL,SHIP_DATE,STATUS,RECEIVED_DATE_cst,DESC1,shipvia,PRT
 246243,À confirmer,Votre commande n'est pas encore en stock. Service à la clientèle vous informera dès que le produit sera reçu. La date d'expédition n'est pas confirmée.,2023-Févr-23,2023-Sept-13,Customer Pickup,X
 246319,2023-Août-28,Votre commande a été préparée par notre centre de distribution. La date d'expédition est confirmée.,2023-Mars-16,2023-Mars-21,PROCTERS,1
 246061,À confirmer,Votre commande n'est pas encore en stock. Service à la clientèle vous informera dès que le produit sera reçu. La date d'expédition n'est pas confirmée.,2023-Mars-03,2023-Sept-18,Customer Pickup,1
-246443,2023-Août-28,Votre commande est en stock. La date d'expédition est confirmée.,2023-Mars-19,2023-Juil-10,GROUND DIRECT,1
+246443,2023-Août-31,Votre commande est en stock. La date d'expédition est confirmée.,2023-Mars-19,2023-Juil-10,Customer Pickup,1
 246425,À confirmer,Votre commande n'est pas encore en stock. Service à la clientèle vous informera dès que le produit sera reçu. La date d'expédition n'est pas confirmée.,2023-Mars-20,2023-Oct-16,POM,1
 246689,À confirmer,"Selon vos instructions, nous avons mis cette commande en attente. Veuillez contacter serviceclientele@dempseycorporation.com si vous souhaitez libérer la commande.",2023-Mars-20,2023-Mars-20,Number 8 Freight,
 246938,2023-Oct-31,Votre commande est en stock. La date d'expédition est confirmée.,2023-Avr-12,2023-Nov-02,Customer Pickup,1
@@ -545,7 +545,7 @@ BL,SHIP_DATE,STATUS,RECEIVED_DATE_cst,DESC1,shipvia,PRT
 250179,À confirmer,Nous avons besoin de votre approbation avant de confirmer la date d'expédition pour votre commande. Veuillez répondre au courriel que Service à la clientèle vous a envoyé ou nous contacter à serviceclientele@dempseycorporation.com si vous n'avez pas reçu d'e-mail concernant cette commande.,2023-Août-14,2023-Août-18,Customer Pickup,
 250254,À confirmer,"Selon vos instructions, nous avons mis cette commande en attente. Veuillez contacter serviceclientele@dempseycorporation.com si vous souhaitez libérer la commande.",2023-Août-17,,Dempsey,
 250293,À confirmer,"Un ou plusieurs produits de votre commande ne sont pas encore en stock. Selon vos instructions, nous attendons pour expédier la commande au complet.",2023-Août-18,2023-Août-25,PROCTERS,
-250295,À confirmer,Votre commande n'est pas encore en stock. Service à la clientèle vous informera dès que le produit sera reçu. La date d'expédition n'est pas confirmée.,2023-Août-18,2023-Août-23,PROCTERS,
+250295,À confirmer,Un ou plusieurs produits de votre commande ne sont pas encore en stock. Veuillez répondre au Service à la clientèle pour confirmer si vous souhaitez séparer la commande ou attendre pour expédier au complet.,2023-Août-18,2023-Août-23,PROCTERS,
 250296,À confirmer,Un ou plusieurs produits de votre commande ne sont pas encore en stock. Veuillez répondre au Service à la clientèle pour confirmer si vous souhaitez séparer la commande ou attendre pour expédier au complet.,2023-Août-17,2023-Août-22,PROCTERS,
 250310,À confirmer,Votre commande n'est pas encore en stock. Service à la clientèle vous informera dès que le produit sera reçu. La date d'expédition n'est pas confirmée.,2023-Août-18,2024-Janv-08,Dempsey,
 250434,À confirmer,Votre commande n'est pas encore en stock. Service à la clientèle vous informera dès que le produit sera reçu. La date d'expédition n'est pas confirmée.,2023-Août-23,2023-Sept-26,BOURRET,
@@ -571,7 +571,7 @@ BL,SHIP_DATE,STATUS,RECEIVED_DATE_cst,DESC1,shipvia,PRT
 250440,2023-Août-29,Votre commande a été reçu par notre centre de distribution. La date d'expédition est confirmée.,2023-Août-22,2023-Août-25,Dempsey,
 250491,2023-Sept-01,Votre commande a été reçu par notre centre de distribution. La date d'expédition est confirmée.,2023-Août-24,2023-Août-31,Customer Pickup,1
 250492,2023-Oct-02,Votre commande est en stock. La date d'expédition est confirmée.,2023-Août-24,2023-Oct-02,Customer Pickup,
-250493,À confirmer,Le prix sur votre bon de commande ne correspond pas à celui dans nos dossiers. Veuillez répondre au courriel que Service à la clientèle vous a envoyé ou nous contacter à serviceclientele@dempseycorporation.com si vous n'avez pas reçu un courriel concernant cette commande.,2023-Août-23,2023-Sept-06,Dempsey,
+250493,À confirmer,Votre commande n'est pas encore en stock. Service à la clientèle vous informera dès que le produit sera reçu. La date d'expédition n'est pas confirmée.,2023-Août-23,2023-Sept-06,Dempsey,
 250494,À confirmer,Un ou plusieurs produits de votre commande ne sont pas encore en stock. Veuillez répondre au Service à la clientèle pour confirmer si vous souhaitez séparer la commande ou attendre pour expédier au complet.,2023-Août-23,2023-Août-23,Customer Pickup,
 250527,À confirmer,Votre commande n'est pas encore en stock. Service à la clientèle vous informera dès que le produit sera reçu. La date d'expédition n'est pas confirmée.,2023-Août-22,2023-Août-25,Dempsey,
 250528,2023-Août-30,Votre commande a été reçu par notre centre de distribution. La date d'expédition est confirmée.,2023-Août-25,2023-Août-30,POM,1
@@ -621,6 +621,8 @@ BL,SHIP_DATE,STATUS,RECEIVED_DATE_cst,DESC1,shipvia,PRT
 250504,2023-Août-29,Votre commande a été préparée par notre centre de distribution. La date d'expédition est confirmée.,2023-Août-24,2023-Août-29,Customer Pickup,2
 250505,À confirmer,Votre commande n'est pas encore en stock. Service à la clientèle vous informera dès que le produit sera reçu. La date d'expédition n'est pas confirmée.,2023-Juil-11,2023-Août-29,Customer Pickup,
 250506,À confirmer,Un ou plusieurs produits de votre commande ne sont pas encore en stock. Le Service Clients vous informera si nous ne pouvons pas respecter votre date demandée de d'expédition.,2023-Août-23,2023-Oct-10,PROCTERS,
+250539,2023-Août-30,Votre commande est en stock. La date d'expédition est confirmée.,2023-Août-28,2023-Août-30,PROCTERS,
+250540,2023-Août-30,Votre commande est en stock. La date d'expédition est confirmée.,2023-Août-28,2023-Août-30,PROCTERS,
 250090,À confirmer,Votre commande n'est pas encore en stock. Service à la clientèle vous informera dès que le produit sera reçu. La date d'expédition n'est pas confirmée.,2023-Août-10,2023-Sept-15,PROCTERS,X
 250091,À confirmer,Votre commande n'est pas encore en stock. Service à la clientèle vous informera dès que le produit sera reçu. La date d'expédition n'est pas confirmée.,2023-Août-10,2023-Déc-01,PROCTERS,X
 250092,À confirmer,Votre commande n'est pas encore en stock. Service à la clientèle vous informera dès que le produit sera reçu. La date d'expédition n'est pas confirmée.,2023-Août-10,2023-Août-16,Customer Pickup,
@@ -654,7 +656,7 @@ BL,SHIP_DATE,STATUS,RECEIVED_DATE_cst,DESC1,shipvia,PRT
 250515,2023-Août-28,Votre commande a été préparée par notre centre de distribution. La date d'expédition est confirmée.,2023-Août-25,2023-Août-29,PROCTERS,2
 250516,2023-Sept-01,Votre commande a été reçu par notre centre de distribution. La date d'expédition est confirmée.,2023-Août-15,2023-Août-31,Dempsey,1
 250517,À confirmer,Votre commande n'est pas encore en stock. Service à la clientèle vous informera dès que le produit sera reçu. La date d'expédition n'est pas confirmée.,2023-Août-24,2023-Août-31,PROCTERS,
-250102,2023-Sept-05,Votre commande a été préparée par notre centre de distribution. La date d'expédition est confirmée.,2023-Août-11,2023-Sept-06,PROCTERS,1
+250102,2023-Sept-05,Votre commande est en stock. La date d'expédition est confirmée.,2023-Août-11,2023-Sept-06,PROCTERS,1
 250340,2023-Sept-28,Votre commande est en stock. La date d'expédition est confirmée.,2023-Août-21,2023-Sept-28,Customer Pickup,
 250341,2023-Oct-12,Votre commande est en stock. La date d'expédition est confirmée.,2023-Août-21,2023-Oct-12,Customer Pickup,
 250342,À confirmer,Votre commande n'est pas encore en stock. Service à la clientèle vous informera dès que le produit sera reçu. La date d'expédition n'est pas confirmée.,2023-Août-21,2023-Oct-26,Customer Pickup,
@@ -672,7 +674,7 @@ BL,SHIP_DATE,STATUS,RECEIVED_DATE_cst,DESC1,shipvia,PRT
 250348,À confirmer,Votre commande n'est pas encore en stock. Service à la clientèle vous informera dès que le produit sera reçu. La date d'expédition n'est pas confirmée.,2023-Août-11,2023-Août-24,Dempsey,
 250350,2023-Août-24,"Votre commande a été ('a été expédiée',) le 2023-Août-04. Vous recevrez une facture sous peu.",2023-Août-18,2023-Août-18,Customer Pickup,1
 250472,À confirmer,Nous avons besoin de votre approbation avant de confirmer la date d'expédition pour votre commande. Veuillez répondre au courriel que Service à la clientèle vous a envoyé ou nous contacter à serviceclientele@dempseycorporation.com si vous n'avez pas reçu d'e-mail concernant cette commande.,2023-Août-24,2023-Sept-13,Customer Pickup,
-250474,À confirmer,Votre commande n'est pas encore en stock. Service à la clientèle vous informera dès que le produit sera reçu. La date d'expédition n'est pas confirmée.,2023-Août-24,2023-Août-24,PROCTERS,
+250474,À confirmer,Un ou plusieurs produits de votre commande ne sont pas encore en stock. Veuillez répondre au Service à la clientèle pour confirmer si vous souhaitez séparer la commande ou attendre pour expédier au complet.,2023-Août-24,2023-Août-24,PROCTERS,
 250353,À confirmer,Votre commande nécessite un prépaiement. Veuillez vous référer aux instructions dans votre e-mail de confirmation de commande et dans la facture proforma. Votre produit n'est pas encore en stock. La date d'expédition n'est pas confirmée.,2023-Août-18,2023-Août-18,PROCTERS,X
 250354,À confirmer,Votre commande n'est pas encore en stock. Service à la clientèle vous informera dès que le produit sera reçu. La date d'expédition n'est pas confirmée.,2023-Août-22,2023-Août-22,Dempsey,
 250355,À confirmer,Votre commande est en cours de traitement. Nous attendons des informations en interne avant de pouvoir confirmer votre commande. Le Service Clients fournira une mise à jour sous peu.,2023-Août-16,2023-Oct-10,PROCTERS,
