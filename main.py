@@ -364,6 +364,36 @@ def export_ordhfile(connection, database_name):
     return ordhfile
 
 
+# --------------------------------- DELETE OLD FILES -------------------------------- #
+def delete_old_files(ordhfile):
+    # Assuming ordhfile is your DataFrame and BL is the column with order numbers
+    bl_set = set(ordhfile['BL'])
+
+    # List of files to keep
+    files_to_keep = {'index.html', 'result.html', 'search.html'}
+
+    # Change to the directory containing your HTML files, or specify its full path
+    html_folder_path = ORDER_STATUS_APP_DIRECTORY
+
+    # List all HTML files
+    for filename in os.listdir(html_folder_path):
+        if filename.endswith('.html'):
+
+            # Skip files that we want to keep
+            if filename in files_to_keep:
+                continue
+
+            # Extract order number from HTML file name (assumes filename is "{order_number}.html")
+            order_number = filename[:-5]
+
+            # Check if the order number is in the DataFrame's BL column
+            if order_number not in bl_set:
+                # Delete the file
+                file_path = os.path.join(html_folder_path, filename)
+                os.remove(file_path)
+                print(f"Deleted: {file_path}")
+
+
 # --------------------------------- PUSH TO GITHUB -------------------------------- #
 def commit_and_push(repo_path, commit_message, branch="main"):
     # Navigate to the repository path
@@ -386,6 +416,7 @@ try:
 
     connection = make_connection(database)
     ordhfile = export_ordhfile(connection, database_name)
+    delete_old_files(ordhfile)
     create_pages.generate_static_pages(database_name)
 
     database = US_DB
@@ -393,6 +424,7 @@ try:
 
     connection = make_connection(database)
     ordhfile = export_ordhfile(connection, database_name)
+    delete_old_files(ordhfile)
     create_pages.generate_static_pages(database_name)
 
     repo_path = ORDER_STATUS_APP_DIRECTORY
