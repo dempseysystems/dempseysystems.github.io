@@ -416,7 +416,6 @@ try:
 
     connection = make_connection(database)
     ordhfile = export_ordhfile(connection, database_name)
-    delete_old_files(ordhfile)
     create_pages.generate_static_pages(database_name)
 
     database = US_DB
@@ -424,8 +423,10 @@ try:
 
     connection = make_connection(database)
     ordhfile = export_ordhfile(connection, database_name)
-    delete_old_files(ordhfile)
     create_pages.generate_static_pages(database_name)
+    
+
+    delete_old_files(ordhfile)
 
     repo_path = ORDER_STATUS_APP_DIRECTORY
     commit_message = f"Commit {datetime.datetime.now()}"
