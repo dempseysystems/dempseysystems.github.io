@@ -424,7 +424,7 @@ try:
     connection = make_connection(database)
     ordhfile = export_ordhfile(connection, database_name)
     create_pages.generate_static_pages(database_name)
-    
+
 
     delete_old_files(ordhfile)
 
