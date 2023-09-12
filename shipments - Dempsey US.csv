@@ -120,7 +120,7 @@ BL,SHIP_DATE,STATUS,RECEIVED_DATE_cst,DESC1,shipvia,PRT
 56687,2023-Sep-21,Your order has been received by our distribution centre. Pickup date is confirmed.,2023-Aug-23,2023-Sep-21,Customer Pickup,2
 56705,2023-Oct-04,Your order is in stock. Pickup date is confirmed.,2023-Aug-28,2023-Oct-11,R&L Carriers,1
 56707,2023-Sep-21,Your order has been received by our distribution centre. Pickup date is confirmed.,2023-Aug-24,2023-Sep-28,FEDEX FRT PRIORITY,2
-56729,To be confirmed,We require your approval prior to confirming the pickup date for your order. Please replyto the email Customer Service sent you or contact us at customerservice@dempseycorporation.com if you have not received an email regarding this order.,2023-Aug-29,2023-Sep-07,UPS GROUND,1
+56729,To be confirmed,Your order is not yet in stock. Customer service will advise once product has been received. Pickup date is not confirmed.,2023-Aug-29,2023-Sep-07,UPS GROUND,1
 56731,To be confirmed,Your order is not yet in stock. Customer service will advise once product has been received. Pickup date is not confirmed.,2023-Aug-29,2023-Oct-05,Kingsgate Logistics,X
 56732,To be confirmed,We require your approval prior to confirming the pickup date for your order. Please replyto the email Customer Service sent you or contact us at customerservice@dempseycorporation.com if you have not received an email regarding this order.,2023-Aug-29,2023-Oct-04,Customer Pickup,X
 56745,To be confirmed,One or more products on your order are not yet in stock. Customer Service will advise if we are unable to meet your requested pickup date.,2023-Aug-30,2023-Oct-25,Aeronet Freight,1
@@ -171,3 +171,4 @@ BL,SHIP_DATE,STATUS,RECEIVED_DATE_cst,DESC1,shipvia,PRT
 56802,To be confirmed,Your order is not yet in stock. Customer service will advise once product has been received. Pickup date is not confirmed.,2023-Sep-07,2023-Sep-27,FEDEX FRT PRIORITY,
 56803,2023-Sep-12,Your order is in stock. Pickup date is confirmed.,2023-Aug-29,2023-Sep-08,FEDEX OVERNIGHT,1
 56804,2023-Sep-13,Your order has been received by our distribution centre. Pickup date is confirmed.,2023-Sep-11,2023-Sep-11,FEDEX GROUND,2
+56805,2023-Sep-29,Your order is in stock. Pickup date is confirmed.,2023-Sep-08,2023-Oct-06,FEDEX GROUND,
