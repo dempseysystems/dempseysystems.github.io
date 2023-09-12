@@ -173,7 +173,7 @@ BL,SHIP_DATE,STATUS,RECEIVED_DATE_cst,DESC1,shipvia,PRT
 249332,2023-Oct-04,Your order is in stock. Ship date is confirmed.,2023-Jul-07,2023-Oct-04,MC FREIGHT,X
 249163,2023-Oct-17,Your order has been received by our distribution centre. Ship date is confirmed.,2023-Jul-05,2023-Oct-17,Dempsey,1
 249543,To be confirmed,Your order is not yet in stock. Customer service will advise once product has been received. Ship date is not confirmed.,2023-Jul-18,2023-Sep-27,PROCTERS,
-249583,2023-Sep-06,Your order is in stock. Ship date is confirmed.,2023-Jul-17,2023-Aug-15,Customer Pickup,1
+249583,2023-Sep-08,Your order was shipped on 2023-Sep-01. You will receive an invoice shortly.,2023-Jul-17,2023-Aug-15,Customer Pickup,1
 249503,To be confirmed,Your order is not yet in stock. Customer service will advise once product has been received. Ship date is not confirmed.,2023-Jul-17,2023-Aug-21,Customer Pickup,
 249505,2023-Sep-26,Your order is in stock. Ship date is confirmed.,2023-Jul-18,2023-Sep-27,BOURRET,
 249636,To be confirmed,"As per your instructions, we have placed this order on hold. Please contact customerservice@dempseycorporation.com if you wish to release the order.",2023-Jul-24,2023-Oct-04,PROCTERS,
@@ -270,7 +270,7 @@ BL,SHIP_DATE,STATUS,RECEIVED_DATE_cst,DESC1,shipvia,PRT
 250269,To be confirmed,Your order is not yet in stock. Customer service will advise once product has been received. Ship date is not confirmed.,2023-Aug-15,2023-Sep-26,TRANSPORT BOURASSA,
 250270,2023-Sep-05,Your order was shipped on 2023-Sep-01. You will receive an invoice shortly.,2023-Aug-16,2023-Sep-05,CW HENDERSON,1
 250271,2023-Sep-06,Your order was shipped on 2023-Sep-01. We are awaiting freight charges and you will receive an invoice shortly.,2023-Aug-17,2023-Aug-17,BOURRET,
-250000,To be confirmed,Your order is not yet in stock. Customer service will advise once product has been received. Ship date is not confirmed.,2023-Aug-04,2023-Aug-28,POM,
+250000,To be confirmed,We require your approval prior to confirming the ship date for your order. Please replyto the email Customer Service sent you or contact us at customerservice@dempseycorporation.com if you have not received an email regarding this order.,2023-Aug-04,2023-Aug-28,POM,
 250001,To be confirmed,Your order is not yet in stock. Customer service will advise once product has been received. Ship date is not confirmed.,2023-Aug-08,2023-Sep-14,PROCTERS,
 250123,To be confirmed,Your order is not yet in stock. Customer service will advise once product has been received. Ship date is not confirmed.,2023-Aug-10,2023-Aug-10,Dempsey,
 250149,2023-Sep-21,Your order has been received by our distribution centre. Ship date is confirmed.,2023-Aug-14,2023-Sep-21,Customer Pickup,2
@@ -674,6 +674,8 @@ BL,SHIP_DATE,STATUS,RECEIVED_DATE_cst,DESC1,shipvia,PRT
 250829,To be confirmed,Your order is not yet in stock. Customer service will advise once product has been received. Ship date is not confirmed.,2023-Sep-05,2023-Oct-23,Dempsey,
 250830,To be confirmed,Your order is not yet in stock. Customer service will advise once product has been received. Ship date is not confirmed.,2023-Sep-05,2023-Dec-07,Dempsey,X
 250831,To be confirmed,Your order is not yet in stock. Customer service will advise once product has been received. Ship date is not confirmed.,2023-Sep-05,2023-Nov-20,FEDEX,
+250904,2023-Sep-13,Your order is in stock. Ship date is confirmed.,2023-Sep-12,2023-Sep-13,Dempsey,
+250905,To be confirmed,Your order is not yet in stock. Customer service will advise once product has been received. Ship date is not confirmed.,2023-Sep-07,2023-Oct-19,Dempsey,X
 250398,To be confirmed,Your order requires prepayment. Please refer to instructions in your order confirmationemail and proforma invoice. Ship / pickup date is not confirmed.,2023-Aug-21,2023-Aug-21,Customer Pickup,X
 250400,2023-Sep-12,Your order has been staged by our distribution centre. Ship date is confirmed.,2023-Aug-22,2023-Sep-12,Customer Pickup,3
 250401,2023-Sep-18,Your order has been received by our distribution centre. Ship date is confirmed.,2023-Aug-21,2023-Sep-19,CW HENDERSON,1
