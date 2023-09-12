@@ -46,7 +46,7 @@ BL,SHIP_DATE,STATUS,RECEIVED_DATE_cst,DESC1,shipvia,PRT
 56464,2023-Oct-02,Votre commande est en stock. La date de ramassage est confirmée.,2023-Juil-24,2023-Oct-10,FEDEX FRT PRIORITY,1
 56518,À confirmer,Votre commande nécessite un prépaiement. Veuillez vous référer aux instructions dans votre e-mail de confirmation de commande et dans la facture proforma. La date de ramassage n'est pas confirmée.,2023-Août-04,2023-Août-09,Customer Pickup,X
 56529,2023-Sept-29,Votre commande est en stock. La date de ramassage est confirmée.,2023-Août-04,2023-Oct-06,K CAM International,1
-56330,2023-Sept-11,Votre commande a été reçu par notre centre de distribution. La date de ramassage est confirmée.,2023-Juil-13,2023-Sept-11,Customer Pickup,2
+56330,2023-Sept-11,"Votre commande a été ('a été ramassée',) le 2023-Sept-13. Vous recevrez une facture sous peu.",2023-Juil-13,2023-Sept-11,Customer Pickup,2
 56421,2023-Oct-17,Votre commande est en stock. La date de ramassage est confirmée.,2023-Juil-21,2023-Oct-24,OLD DOMINION,1
 56423,À confirmer,Votre commande n'est pas encore en stock. Service à la clientèle vous informera dès que le produit sera reçu. La date de ramassage n'est pas confirmée.,2023-Juil-21,2023-Août-14,FEDEX FRT PRIORITY,1
 56535,2023-Sept-11,Votre commande est en stock. La date de ramassage est confirmée.,2023-Août-01,2023-Sept-15,FEDEX GROUND,
@@ -79,9 +79,9 @@ BL,SHIP_DATE,STATUS,RECEIVED_DATE_cst,DESC1,shipvia,PRT
 56651,À confirmer,Votre commande n'est pas encore en stock. Service à la clientèle vous informera dès que le produit sera reçu. La date de ramassage n'est pas confirmée.,2023-Août-18,2023-Août-25,Dempsey,1
 56653,À confirmer,Votre commande n'est pas encore en stock. Service à la clientèle vous informera dès que le produit sera reçu. La date de ramassage n'est pas confirmée.,2023-Juil-21,2023-Sept-06,ALL CONNECT,1
 56654,À confirmer,Votre commande n'est pas encore en stock. Service à la clientèle vous informera dès que le produit sera reçu. La date de ramassage n'est pas confirmée.,2023-Août-17,2023-Sept-12,FEDEX FRT PRIORITY,1
-56659,2023-Sept-11,Votre commande a été reçu par notre centre de distribution. La date de ramassage est confirmée.,2023-Août-18,2023-Sept-12,FEDEX FRT PRIORITY,2
+56659,2023-Sept-11,"Votre commande a été ('a été ramassée',) le 2023-Sept-13. Vous recevrez une facture sous peu.",2023-Août-18,2023-Sept-12,FEDEX FRT PRIORITY,2
 56660,À confirmer,"Un ou plusieurs produits de votre commande ne sont pas encore en stock. Selon vos instructions, nous attendons pour expédier la commande au complet.",2023-Août-15,2023-Sept-12,Ultimate Freightway,1
-56573,À confirmer,Un ou plusieurs produits de votre commande ne sont pas encore en stock. Le Service Clients vous informera si nous ne pouvons pas respecter votre date demandée de de ramassage.,2023-Août-07,2023-Sept-20,Dempsey,1
+56573,2023-Sept-18,Votre commande est en stock. La date de ramassage est confirmée.,2023-Août-07,2023-Sept-20,Dempsey,2
 56634,2023-Sept-21,Votre commande a été reçu par notre centre de distribution. La date de ramassage est confirmée.,2023-Août-14,2023-Sept-28,R&L Carriers,2
 56664,À confirmer,Un ou plusieurs produits de votre commande ne sont pas encore en stock. Le Service Clients vous informera si nous ne pouvons pas respecter votre date demandée de de ramassage.,,2023-Sept-14,ECHO GLOBAL LOGISTICS,2
 56674,2023-Sept-28,Votre commande est en stock. La date de ramassage est confirmée.,2023-Août-21,2023-Oct-05,FEDEX FRT PRIORITY,1
@@ -99,13 +99,13 @@ BL,SHIP_DATE,STATUS,RECEIVED_DATE_cst,DESC1,shipvia,PRT
 56501,À confirmer,Votre commande n'est pas encore en stock. Service à la clientèle vous informera dès que le produit sera reçu. La date de ramassage n'est pas confirmée.,2023-Août-01,2023-Oct-02,UPS FREIGHT,X
 56519,À confirmer,Votre commande n'est pas encore en stock. Service à la clientèle vous informera dès que le produit sera reçu. La date de ramassage n'est pas confirmée.,2023-Août-04,2023-Oct-19,AERONET,1
 56665,À confirmer,Votre commande n'est pas encore en stock. Service à la clientèle vous informera dès que le produit sera reçu. La date de ramassage n'est pas confirmée.,2023-Août-21,2023-Août-31,FEDEX GROUND,
-56667,À confirmer,Votre commande n'est pas encore en stock. Service à la clientèle vous informera dès que le produit sera reçu. La date de ramassage n'est pas confirmée.,2023-Août-16,2023-Sept-08,Dempsey,X
+56667,2023-Sept-29,Votre commande est en stock. La date de ramassage est confirmée.,2023-Août-16,2023-Sept-08,Dempsey,X
 56668,2023-Sept-01,Votre commande est en stock. La date de ramassage est confirmée.,2023-Août-15,2023-Août-15,Dempsey,1
 56681,À confirmer,Votre commande n'est pas encore en stock. Service à la clientèle vous informera dès que le produit sera reçu. La date de ramassage n'est pas confirmée.,2023-Août-22,2023-Sept-04,Dempsey,1
 56684,2023-Oct-12,Votre commande a été reçu par notre centre de distribution. La date de ramassage est confirmée.,2023-Août-21,2023-Oct-12,FEDEX GROUND,1
 56701,À confirmer,Votre commande n'est pas encore en stock. Service à la clientèle vous informera dès que le produit sera reçu. La date de ramassage n'est pas confirmée.,2023-Août-25,2023-Sept-07,FEDEX FRT PRIORITY,1
 56704,À confirmer,Votre commande n'est pas encore en stock. Service à la clientèle vous informera dès que le produit sera reçu. La date de ramassage n'est pas confirmée.,2023-Août-25,2023-Oct-04,FEDEX FRT PRIORITY,1
-56725,2023-Sept-11,Votre commande a été reçu par notre centre de distribution. La date de ramassage est confirmée.,2023-Août-28,2023-Sept-26,SCHNIDT,2
+56725,2023-Sept-11,"Votre commande a été ('a été ramassée',) le 2023-Sept-13. Vous recevrez une facture sous peu.",2023-Août-28,2023-Sept-26,SCHNIDT,2
 56726,2023-Sept-11,Votre commande a été reçu par notre centre de distribution. La date de ramassage est confirmée.,2023-Août-18,2023-Sept-18,UPS GROUND,2
 56728,À confirmer,Votre commande n'est pas encore en stock. Service à la clientèle vous informera dès que le produit sera reçu. La date de ramassage n'est pas confirmée.,2023-Août-29,2023-Sept-04,FEDEX FRT PRIORITY,1
 56734,2023-Sept-06,"Votre commande a été ('a été ramassée',) le 2023-Sept-13. Vous recevrez une facture sous peu.",2023-Août-28,2023-Sept-05,FEDEX FRT PRIORITY,2
@@ -113,7 +113,7 @@ BL,SHIP_DATE,STATUS,RECEIVED_DATE_cst,DESC1,shipvia,PRT
 56742,2023-Sept-11,Votre commande a été reçu par notre centre de distribution. La date de ramassage est confirmée.,2023-Août-30,2023-Sept-07,Dempsey,2
 56744,2023-Sept-11,Votre commande a été reçu par notre centre de distribution. La date de ramassage est confirmée.,2023-Août-30,2023-Sept-08,Aeronet Freight,2
 56504,À confirmer,Votre commande n'est pas encore en stock. Service à la clientèle vous informera dès que le produit sera reçu. La date de ramassage n'est pas confirmée.,2023-Août-01,2023-Sept-01,UPS FREIGHT,X
-56669,2023-Sept-11,Votre commande a été reçu par notre centre de distribution. La date de ramassage est confirmée.,2023-Août-17,2023-Sept-18,FEDEX FRT PRIORITY,2
+56669,2023-Sept-11,"Votre commande a été ('a été ramassée',) le 2023-Sept-13. Nous attendons les frais de transport et vous recevrez une facture sous peu.",2023-Août-17,2023-Sept-18,FEDEX FRT PRIORITY,2
 56670,2023-Sept-11,Votre commande a été reçu par notre centre de distribution. La date de ramassage est confirmée.,2023-Juil-28,2023-Août-21,Dempsey,1
 56671,2023-Oct-06,Votre commande est en stock. La date de ramassage est confirmée.,2023-Août-17,2023-Oct-06,Customer Pickup,1
 56685,À confirmer,Un ou plusieurs produits de votre commande ne sont pas encore en stock. Le Service Clients vous informera si nous ne pouvons pas respecter votre date demandée de de ramassage.,2023-Août-21,2023-Oct-05,CK WORLDWIDE,1
@@ -147,10 +147,10 @@ BL,SHIP_DATE,STATUS,RECEIVED_DATE_cst,DESC1,shipvia,PRT
 56760,2023-Sept-08,Votre commande a été reçu par notre centre de distribution. La date de ramassage est confirmée.,2023-Sept-05,2023-Sept-15,NUMARK,1
 56761,2023-Sept-18,Votre commande est en stock. La date de ramassage est confirmée.,,2023-Sept-19,Dempsey,
 56762,À confirmer,Un ou plusieurs produits de votre commande ne sont pas encore en stock. Le Service Clients vous informera si nous ne pouvons pas respecter votre date demandée de de ramassage.,2023-Août-31,2023-Sept-28,FEDEX FRT PRIORITY,
-56765,2023-Sept-11,Votre commande a été reçu par notre centre de distribution. La date de ramassage est confirmée.,,2023-Sept-13,FEDEX FRT PRIORITY,1
+56765,2023-Sept-11,"Votre commande a été ('a été ramassée',) le 2023-Sept-13. Nous attendons les frais de transport et vous recevrez une facture sous peu.",,2023-Sept-13,FEDEX FRT PRIORITY,1
 56766,À confirmer,Un ou plusieurs produits de votre commande ne sont pas encore en stock. Le Service Clients vous informera si nous ne pouvons pas respecter votre date demandée de de ramassage.,2023-Sept-01,2023-Oct-02,Dayton Freight,
 56770,À confirmer,Un ou plusieurs produits de votre commande ne sont pas encore en stock. Le Service Clients vous informera si nous ne pouvons pas respecter votre date demandée de de ramassage.,2023-Sept-06,2024-Janv-05,Customer Pickup,
-56552,À confirmer,Votre commande n'est pas encore en stock. Service à la clientèle vous informera dès que le produit sera reçu. La date de ramassage n'est pas confirmée.,2023-Août-11,2023-Juil-29,Customer Pickup,1
+56552,2023-Sept-19,Votre commande est en stock. La date de ramassage est confirmée.,2023-Août-11,2023-Juil-29,Customer Pickup,2
 56553,2023-Sept-13,Votre commande a été reçu par notre centre de distribution. La date de ramassage est confirmée.,2023-Août-11,2023-Juil-29,Customer Pickup,2
 56780,À confirmer,Nous avons besoin de votre approbation avant de confirmer la date de ramassage pour votre commande. Veuillez répondre au courriel que Service à la clientèle vous a envoyé ou nous contacter à serviceclientele@dempseycorporation.com si vous n'avez pas reçu d'e-mail concernant cette commande.,2023-Sept-05,2023-Août-28,FEDEX FRT PRIORITY,
 56781,2023-Sept-13,Votre commande a été reçu par notre centre de distribution. La date de ramassage est confirmée.,2023-Sept-06,2023-Sept-13,Dempsey,1
