@@ -367,7 +367,7 @@ def export_ordhfile(connection, database_name):
 # --------------------------------- DELETE OLD FILES -------------------------------- #
 def delete_old_files(ordhfile):
     # Assuming ordhfile is your DataFrame and BL is the column with order numbers
-    bl_set = set(ordhfile['BL'])
+    bl_set = set(ordhfile['BL'].astype(str))
     print(bl_set)
     # List of files to keep
     files_to_keep = {'index.html', 'result.html', 'search.html'}
