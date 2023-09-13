@@ -121,3 +121,10 @@ ValueError: NaTType does not support strftime
 2023-08-18 13:51:45,125 - INFO - Execution time: 8.986166715621948
 2023-09-12 16:23:06,517 - INFO - Order Status App started.
 2023-09-12 16:24:50,702 - INFO - Execution time: 104.18478274345398
+2023-09-13 09:16:49,983 - INFO - Order Status App started.
+2023-09-13 09:16:52,380 - ERROR - An unexpected error occurred
+Traceback (most recent call last):
+  File "C:\Users\Mitchell\PycharmProjects\dempseysystems.github.io\main.py", line 428, in <module>
+    ordhfile = pd.concat[ordhfile, ordhfile_us]
+TypeError: 'function' object is not subscriptable
+2023-09-13 09:16:52,380 - INFO - Execution time: 2.3962907791137695

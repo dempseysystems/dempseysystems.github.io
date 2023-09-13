@@ -422,9 +422,10 @@ try:
     database_name = US_DB_NAME
 
     connection = make_connection(database)
-    ordhfile = export_ordhfile(connection, database_name)
+    ordhfile_us = export_ordhfile(connection, database_name)
     create_pages.generate_static_pages(database_name)
 
+    ordhfile = pd.concat([ordhfile, ordhfile_us])
 
     delete_old_files(ordhfile)
 
