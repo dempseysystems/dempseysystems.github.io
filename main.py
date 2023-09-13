@@ -61,9 +61,12 @@ def make_connection(database):
 
 # --------------------------------- ORDHFILE -------------------------------- #
 def export_ordhfile(connection, database_name):
-    ordhfile = read_sql_with_retry(f"select BL, SHIPDT AS SHIP_DATE, DSC2 AS STATUS, RECEIVED_DATE_cst, DESC1, shipvia, PRT"
-                           f" from ORDHFILE WHERE CLOSED=FALSE AND (DIV='01' OR DIV='06')",
-                           connection)
+    query = """
+    SELECT BL, SHIPDT AS SHIP_DATE, DSC2 AS STATUS, RECEIVED_DATE_cst, DESC1, shipvia, PRT
+    FROM ORDHFILE
+    WHERE (CLOSED = FALSE OR DateDiff('d', SHIPDT, Date()) <= 14) AND (DIV = '01' OR DIV = '06')
+    """
+    ordhfile = read_sql_with_retry(query, connection)
 
     # Replacements to apply to both english and french dataframes
     # Current Date
@@ -368,6 +371,7 @@ def export_ordhfile(connection, database_name):
 def delete_old_files(ordhfile):
     # Assuming ordhfile is your DataFrame and BL is the column with order numbers
     bl_set = set(ordhfile['BL'].astype(str))
+    print(bl_set)
     # List of files to keep
     files_to_keep = {'index.html', 'result.html', 'search.html'}
 
