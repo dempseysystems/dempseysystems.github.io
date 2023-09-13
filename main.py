@@ -368,7 +368,6 @@ def export_ordhfile(connection, database_name):
 def delete_old_files(ordhfile):
     # Assuming ordhfile is your DataFrame and BL is the column with order numbers
     bl_set = set(ordhfile['BL'].astype(str))
-    print(bl_set)
     # List of files to keep
     files_to_keep = {'index.html', 'result.html', 'search.html'}
 
@@ -426,7 +425,6 @@ try:
     create_pages.generate_static_pages(database_name)
 
     ordhfile = pd.concat([ordhfile, ordhfile_us])
-    print(ordhfile)
     delete_old_files(ordhfile)
 
     repo_path = ORDER_STATUS_APP_DIRECTORY
