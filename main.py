@@ -426,7 +426,7 @@ try:
     create_pages.generate_static_pages(database_name)
 
     ordhfile = pd.concat([ordhfile, ordhfile_us])
-
+    print(ordhfile)
     delete_old_files(ordhfile)
 
     repo_path = ORDER_STATUS_APP_DIRECTORY

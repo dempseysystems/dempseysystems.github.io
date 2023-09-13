@@ -128,3 +128,5 @@ Traceback (most recent call last):
     ordhfile = pd.concat[ordhfile, ordhfile_us]
 TypeError: 'function' object is not subscriptable
 2023-09-13 09:16:52,380 - INFO - Execution time: 2.3962907791137695
+2023-09-13 09:18:26,551 - INFO - Order Status App started.
+2023-09-13 09:18:33,612 - INFO - Execution time: 7.061035871505737
