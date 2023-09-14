@@ -24,7 +24,7 @@ BL,SHIP_DATE,STATUS,RECEIVED_DATE_cst,DESC1,shipvia,PRT
 56170,2023-Sep-18,Your order has been received by our distribution centre. Pickup date is confirmed.,2023-Jun-16,2023-Oct-02,All Connect,2
 56176,2023-Dec-01,Your order is in stock. Pickup date is confirmed.,2023-Jun-16,2023-Dec-01,Customer Pickup,1
 56177,2023-Sep-14,Your order has been received by our distribution centre. Pickup date is confirmed.,2023-Jun-19,2023-Sep-14,Customer Pickup,2
-56677,To be confirmed,Our distribution centre has advised that your order was not picked up by your carrieron the date we requested. We have followed up with the carrier and they will pick up as soon as possible.,2023-Aug-23,2023-Sep-11,FEDEX FRT PRIORITY,4
+56677,2023-Sep-13,Your order was picked up on 2023-Sep-13. We are awaiting freight charges and you will receive an invoice shortly.,2023-Aug-23,2023-Sep-11,FEDEX FRT PRIORITY,4
 56678,To be confirmed,Your order is not yet in stock. Customer service will advise once product has been received. Pickup date is not confirmed.,2023-Aug-23,2023-Sep-13,ALL CONNECT,
 56680,2023-Sep-07,Your order was picked up on 2023-Sep-13. You will receive an invoice shortly.,2023-Aug-21,2023-Sep-14,FEDEX FRT PRIORITY,1
 56445,2023-Sep-11,Your order has been received by our distribution centre. Pickup date is confirmed.,2023-Jul-19,2023-Aug-07,Customer Pickup,2
@@ -209,7 +209,7 @@ BL,SHIP_DATE,STATUS,RECEIVED_DATE_cst,DESC1,shipvia,PRT
 56780,To be confirmed,We require your approval prior to confirming the pickup date for your order. Please replyto the email Customer Service sent you or contact us at customerservice@dempseycorporation.com if you have not received an email regarding this order.,2023-Sep-05,2023-Aug-28,FEDEX FRT PRIORITY,
 56781,2023-Sep-13,Your order has been received by our distribution centre. Pickup date is confirmed.,2023-Sep-06,2023-Sep-13,Dempsey,1
 56782,2023-Sep-11,Your order is in stock. Pickup date is confirmed.,2023-Sep-01,2023-Sep-07,Customer Pickup,1
-56783,2023-Sep-12,Your order has been received by our distribution centre. Pickup date is confirmed.,2023-Aug-29,2023-Sep-08,ALLCONNECT,3
+56783,2023-Sep-13,Your order was picked up on 2023-Sep-13. We are awaiting freight charges and you will receive an invoice shortly.,2023-Aug-29,2023-Sep-08,ALLCONNECT,3
 56784,2023-Sep-20,Your order has been received by our distribution centre. Pickup date is confirmed.,2023-Sep-06,2023-Sep-27,FEDEX FRT PRIORITY,1
 56785,2023-Oct-20,Your order is in stock. Pickup date is confirmed.,2023-Sep-01,2023-Oct-27,ECHO LOGISTICS,1
 56786,2023-Sep-12,Your order was picked up on 2023-Sep-13. You will receive an invoice shortly.,2023-Sep-07,2023-Sep-19,Ultimate Freightway,1
@@ -223,8 +223,8 @@ BL,SHIP_DATE,STATUS,RECEIVED_DATE_cst,DESC1,shipvia,PRT
 56800,2023-Sep-14,Your order has been received by our distribution centre. Pickup date is confirmed.,2023-Sep-08,2023-Sep-19,FEDEX FRT PRIORITY,2
 56801,To be confirmed,Your order is not yet in stock. Customer service will advise once product has been received. Pickup date is not confirmed.,2023-Sep-07,2023-Sep-27,Customer Pickup,X
 56802,To be confirmed,Your order is not yet in stock. Customer service will advise once product has been received. Pickup date is not confirmed.,2023-Sep-07,2023-Sep-27,FEDEX FRT PRIORITY,
-56803,2023-Sep-12,Your order is in stock. Pickup date is confirmed.,2023-Aug-29,2023-Sep-08,ALL CONNECT,2
-56804,2023-Sep-13,Your order has been received by our distribution centre. Pickup date is confirmed.,2023-Sep-11,2023-Sep-11,FEDEX GROUND,2
+56803,2023-Sep-13,Your order was picked up on 2023-Sep-13. We are awaiting freight charges and you will receive an invoice shortly.,2023-Aug-29,2023-Sep-08,ALL CONNECT,2
+56804,2023-Sep-13,Your order was picked up on 2023-Sep-13. You will receive an invoice shortly.,2023-Sep-11,2023-Sep-11,FEDEX GROUND,2
 56805,2023-Sep-29,Your order is in stock. Pickup date is confirmed.,2023-Sep-08,2023-Oct-06,FEDEX GROUND,
 56806,2023-Sep-14,Your order has been received by our distribution centre. Pickup date is confirmed.,2023-Sep-08,2023-Sep-14,Customer Pickup,1
 56807,To be confirmed,"One or more products on your order are not yet in stock. As per your instructions, we are waiting to ship the order complete.",2023-Aug-25,2023-Sep-15,Dempsey,
