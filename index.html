@@ -81,7 +81,18 @@ document.querySelector("form").addEventListener("submit", function(event){
     }
 });
 </script>
+<script>
+        function getQueryParam(name) {
+            const urlParams = new URLSearchParams(window.location.search);
+            return urlParams.get(name);
+        }
 
+        const blNumber = getQueryParam('bl_number');
+
+        if (blNumber !== null) {
+            document.getElementById('bl_input').value = blNumber;
+        }
+    </script>
 
 </body>
 </html>
