@@ -30,7 +30,7 @@ BL,SHIP_DATE,STATUS,RECEIVED_DATE_cst,DESC1,shipvia,PRT
 56543,2023-Sep-29,Your order was picked up on 2023-Oct-02. You will receive an invoice shortly.,2023-Aug-07,2023-Oct-04,ECHO LOGISTICS,2
 56401,2023-Nov-02,Your order has been received by our distribution centre. Pickup date is confirmed.,2023-Jul-19,2023-Nov-02,Dempsey,1
 56614,2023-Oct-10,Your order was picked up on 2023-Oct-02. You will receive an invoice shortly.,2023-Aug-10,2023-Oct-17,FEDEX FRT PRIORITY,2
-56627,To be confirmed,"As per your instructions, we have placed this order on hold. Please contact customerservice@dempseycorporation.com if you wish to release the order.",2023-Aug-11,2023-Oct-13,Dempsey,2
+56627,2023-Oct-24,Your order is in stock. Pickup date is confirmed.,2023-Aug-11,2023-Oct-31,Dempsey,3
 56628,2024-Jan-10,Your order is in stock. Pickup date is confirmed.,2023-Aug-11,2024-Jan-10,Customer Pickup,1
 56639,2023-Sep-27,Your order was picked up on 2023-Oct-02. You will receive an invoice shortly.,2023-Aug-15,2023-Sep-26,FEDEX FRT PRIORITY,1
 56645,To be confirmed,We require your approval prior to confirming the pickup date for your order. Please replyto the email Customer Service sent you or contact us at customerservice@dempseycorporation.com if you have not received an email regarding this order.,2023-Aug-10,2023-Aug-24,Customer Pickup,1
@@ -239,6 +239,8 @@ BL,SHIP_DATE,STATUS,RECEIVED_DATE_cst,DESC1,shipvia,PRT
 57031,2023-Oct-11,Your order has been received by our distribution centre. Pickup date is confirmed.,2023-Oct-09,2023-Oct-18,SCHNIDT,1
 57032,To be confirmed,Your order is not yet in stock. Customer service will advise once product has been received. Pickup date is not confirmed.,2023-Oct-09,2023-Oct-20,Customer Pickup,
 57049,To be confirmed,We require your approval prior to confirming the pickup date for your order. Please replyto the email Customer Service sent you or contact us at customerservice@dempseycorporation.com if you have not received an email regarding this order.,2023-Oct-05,2023-Nov-03,Customer Pickup,
+57050,To be confirmed,One or more products on your order are not yet in stock. Customer Service will advise if we are unable to meet your requested pickup date.,2023-Oct-05,2023-Nov-30,FEDEX FRT PRIORITY,X
+57051,2023-Oct-25,Your order is in stock. Pickup date is confirmed.,2023-Oct-05,2023-Nov-01,FEDEX FRT PRIORITY,
 56794,2023-Oct-05,Your order was picked up on 2023-Oct-02. You will receive an invoice shortly.,2023-Sep-05,2023-Oct-05,Kingsgate Logistics,1
 56799,2023-Sep-28,Your order was picked up on 2023-Oct-02. You will receive an invoice shortly.,2023-Sep-08,2023-Sep-28,Customer Pickup,1
 56801,2023-Oct-02,Your order was picked up on 2023-Oct-02. You will receive an invoice shortly.,2023-Sep-07,2023-Sep-27,Customer Pickup,1
