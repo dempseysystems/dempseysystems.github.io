@@ -653,7 +653,7 @@ BL,SHIP_DATE,STATUS,RECEIVED_DATE_cst,DESC1,shipvia,PRT
 251433,2023-Oct-10,Your order was shipped on 2023-Oct-02. You will receive an invoice shortly.,2023-Oct-02,2023-Oct-09,Customer Pickup,1
 251434,2023-Oct-03,Your order was shipped on 2023-Oct-02. You will receive an invoice shortly.,2023-Aug-10,2023-Oct-03,Dempsey,
 251435,To be confirmed,Your order is not yet in stock. Customer service will advise once product has been received. Ship date is not confirmed.,2023-Sep-25,2023-Oct-27,PUROLATOR,1
-251461,2023-Oct-12,Your order is in stock. Ship date is confirmed.,2023-Oct-02,2023-Oct-12,Customer Pickup,1
+251461,2023-Oct-12,Your order has been received by our distribution centre. Ship date is confirmed.,2023-Oct-02,2023-Oct-12,Customer Pickup,3
 251462,To be confirmed,Your order is not yet in stock. Customer service will advise once product has been received. Ship date is not confirmed.,2023-Oct-02,2023-Dec-19,CONFED TRUCK,1
 251463,To be confirmed,Your order is not yet in stock. Customer service will advise once product has been received. Ship date is not confirmed.,2023-Oct-02,2023-Nov-27,TRANSPORT BOURASSA,1
 251464,To be confirmed,Your order is not yet in stock. Customer service will advise once product has been received. Ship date is not confirmed.,2023-Sep-28,2023-Nov-02,PROCTERS,1
@@ -822,7 +822,7 @@ BL,SHIP_DATE,STATUS,RECEIVED_DATE_cst,DESC1,shipvia,PRT
 251527,2023-Oct-30,Your order has been received by our distribution centre. Ship date is confirmed.,2023-Oct-02,2023-Oct-30,Customer Pickup,2
 251529,2023-Oct-10,Your order was shipped on 2023-Oct-02. You will receive an invoice shortly.,2023-Oct-04,2023-Oct-17,Dempsey,2
 251530,2023-Oct-10,Your order was shipped on 2023-Oct-02. You will receive an invoice shortly.,2023-Oct-04,2023-Oct-12,TRANSPORT BOURASSA,1
-251531,2023-Oct-12,Your order is in stock. Ship date is confirmed.,2023-Oct-04,2023-Oct-04,Customer Pickup,1
+251531,2023-Oct-12,Your order has been received by our distribution centre. Ship date is confirmed.,2023-Oct-04,2023-Oct-04,Customer Pickup,3
 251568,To be confirmed,Your order is not yet in stock. Customer service will advise once product has been received. Ship date is not confirmed.,2023-Oct-03,2023-Dec-08,Customer Pickup,1
 251569,To be confirmed,One or more products on your order are not yet in stock. Customer Service will advise if we are unable to meet your requested ship date.,2023-Oct-03,2023-Dec-12,Customer Pickup,1
 251570,2023-Oct-10,Your order was shipped on 2023-Oct-02. You will receive an invoice shortly.,2023-Oct-04,2023-Oct-04,POM,1
@@ -898,6 +898,9 @@ BL,SHIP_DATE,STATUS,RECEIVED_DATE_cst,DESC1,shipvia,PRT
 251543,To be confirmed,Your order is not yet in stock. Customer service will advise once product has been received. Ship date is not confirmed.,2023-Oct-04,2023-Oct-05,Customer Pickup,1
 251610,To be confirmed,Your order is not yet in stock. Customer service will advise once product has been received. Ship date is not confirmed.,2023-Oct-06,2023-Nov-30,PROCTERS,1
 251637,To be confirmed,Your order is not yet in stock. Customer service will advise once product has been received. Ship date is not confirmed.,2023-Oct-09,2023-Oct-12,APPS CARTAGE INC,1
+251688,To be confirmed,Your order is not yet in stock. Customer service will advise once product has been received. Ship date is not confirmed.,2023-Oct-10,2023-Nov-20,Customer Pickup,
+251689,To be confirmed,Your order is not yet in stock. Customer service will advise once product has been received. Ship date is not confirmed.,2023-Oct-10,2023-Nov-27,Customer Pickup,
+251690,To be confirmed,Your order is not yet in stock. Customer service will advise once product has been received. Ship date is not confirmed.,2023-Oct-10,2023-Dec-04,Customer Pickup,
 251312,To be confirmed,Your order is not yet in stock. Customer service will advise once product has been received. Ship date is not confirmed.,2023-Sep-26,2023-Sep-27,Dempsey,1
 251313,2023-Oct-30,Your order is in stock. Ship date is confirmed.,2023-Sep-25,2023-Oct-30,Customer Pickup,1
 251314,To be confirmed,Your order is not yet in stock. Customer service will advise once product has been received. Ship date is not confirmed.,2023-Sep-25,2023-Nov-06,Customer Pickup,1
@@ -967,9 +970,10 @@ BL,SHIP_DATE,STATUS,RECEIVED_DATE_cst,DESC1,shipvia,PRT
 251675,2023-Oct-13,Your order has been received by our distribution centre. Ship date is confirmed.,2023-Oct-06,2023-Oct-16,PROCTERS,1
 251676,To be confirmed,Your order is not yet in stock. Customer service will advise once product has been received. Ship date is not confirmed.,2023-Sep-18,2023-Oct-02,PROCTERS,
 251677,To be confirmed,Your order is not yet in stock. Customer service will advise once product has been received. Ship date is not confirmed.,2023-Oct-10,2023-Oct-10,Di Com # 864449,X
-251678,2023-Oct-16,Your order is in stock. Ship date is confirmed.,2023-Oct-10,2023-Oct-16,SERVICE FREIGHT,
+251678,2023-Oct-16,Your order has been received by our distribution centre. Ship date is confirmed.,2023-Oct-10,2023-Oct-16,SERVICE FREIGHT,1
 251679,To be confirmed,Your order is not yet in stock. Customer service will advise once product has been received. Ship date is not confirmed.,2023-Oct-06,2023-Nov-06,VITRAN,
 251680,To be confirmed,Your order is not yet in stock. Customer service will advise once product has been received. Ship date is not confirmed.,2023-Oct-10,2023-Oct-24,Dempsey,
 251681,To be confirmed,Your order is not yet in stock. Customer service will advise once product has been received. Ship date is not confirmed.,2023-Oct-10,2024-Jan-29,Customer Pickup,X
 251682,2023-Oct-13,Your order is in stock. Ship date is confirmed.,2023-Oct-11,2023-Oct-16,PROCTERS,X
-251686,2023-Oct-13,Your order is in stock. Ship date is confirmed.,2023-Oct-10,2023-Oct-13,Customer Pickup,1
+251686,2023-Oct-13,Your order has been received by our distribution centre. Ship date is confirmed.,2023-Oct-10,2023-Oct-13,Customer Pickup,2
+251687,To be confirmed,Your order is not yet in stock. Customer service will advise once product has been received. Ship date is not confirmed.,2023-Oct-10,2023-Nov-13,Customer Pickup,
