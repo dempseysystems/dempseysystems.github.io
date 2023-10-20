@@ -941,8 +941,8 @@ BL,SHIP_DATE,STATUS,RECEIVED_DATE_cst,DESC1,shipvia,PRT
 251891,2023-Nov-13,Your order is in stock. Ship date is confirmed.,2023-Oct-18,2023-Nov-14,POLARIS,
 251892,To be confirmed,One or more products on your order are not yet in stock. Customer Service will advise if we are unable to meet your requested ship date.,2023-Oct-18,2023-Nov-21,POLARIS,
 251893,2023-Oct-26,Your order has been received by our distribution centre. Ship date is confirmed.,2023-Oct-18,2023-Oct-31,TRANSPORT BOURASSA,1
-251917,To be confirmed,Your order requires pre-payment. Please refer to instructions in your order confirmationemail and proforma invoice. Your product is not yet in stock. Ship / pickup date is not confirmed.,2023-Oct-18,2023-Nov-20,Customer Pickup,X
-251918,To be confirmed,Your order requires pre-payment. Please refer to instructions in your order confirmationemail and proforma invoice. Your product is not yet in stock. Ship / pickup date is not confirmed.,2023-Oct-18,2023-Nov-20,Customer Pickup,X
+251917,To be confirmed,Your order requires pre-payment. Please refer to instructions in your order confirmationemail and proforma invoice. Your product is not yet in stock. Ship / pickup date is not confirmed.,2023-Oct-18,2023-Nov-20,Customer Pickup,
+251918,To be confirmed,Your order requires pre-payment. Please refer to instructions in your order confirmationemail and proforma invoice. Your product is not yet in stock. Ship / pickup date is not confirmed.,2023-Oct-18,2023-Nov-20,Customer Pickup,
 251919,2023-Nov-06,Your order is in stock. Ship date is confirmed.,2023-Oct-18,2023-Nov-15,POM,
 251730,To be confirmed,Your order is not yet in stock. Customer service will advise once product has been received. Ship date is not confirmed.,2023-Oct-12,2023-Oct-25,Customer Pickup,
 251731,2023-Oct-16,Your order was shipped on 2023-Oct-02. You will receive an invoice shortly.,2023-Oct-12,2023-Oct-16,Dempsey,
@@ -1003,7 +1003,7 @@ BL,SHIP_DATE,STATUS,RECEIVED_DATE_cst,DESC1,shipvia,PRT
 251867,To be confirmed,Your order is not yet in stock. Customer service will advise once product has been received. Ship date is not confirmed.,2023-Oct-17,2023-Nov-30,Customer Pickup,
 251932,To be confirmed,Your order is being processed. We are awaiting information internally before we can confirm your order. Customer Service will provide an update shortly.,2023-Oct-17,2023-Oct-24,Customer Pickup,
 251933,2023-Oct-24,Your order is in stock. Ship date is confirmed.,2023-Oct-20,2023-Oct-25,TRANSPORT BOURASSA,
-251934,2023-Oct-23,Your order is in stock. Ship date is confirmed.,2023-Oct-20,2023-Oct-24,PROCTERS,X
+251934,2023-Oct-23,Your order is in stock. Ship date is confirmed.,2023-Oct-20,2023-Oct-24,PROCTERS,
 251935,2023-Oct-30,Your order is in stock. Ship date is confirmed.,2023-Oct-20,2023-Oct-31,PROCTERS,
 251869,To be confirmed,The price on your purchase order does not match our records. Please replyto the email Customer Service sent you or contact us at customerservice@dempseycorporation.com if you have not received an email regarding this order.,2023-Oct-16,2023-Dec-15,Customer Pickup,
 251870,2023-Dec-04,Your order is in stock. Ship date is confirmed.,2023-Oct-16,2023-Dec-05,PROCTERS,
@@ -1014,3 +1014,7 @@ BL,SHIP_DATE,STATUS,RECEIVED_DATE_cst,DESC1,shipvia,PRT
 251939,2023-Oct-24,Your order is in stock. Ship date is confirmed.,2023-Oct-13,2023-Oct-27,VITRAN,
 251940,2023-Nov-17,Your order is in stock. Ship date is confirmed.,2023-Oct-20,2023-Nov-20,BOURRET,
 251941,2023-Oct-25,Your order is in stock. Ship date is confirmed.,2023-Oct-20,2023-Oct-26,BOURRET,X
+251942,2023-Oct-31,Your order is in stock. Ship date is confirmed.,2023-Oct-20,2023-Nov-01,BOURRET,X
+251943,To be confirmed,Your order requires pre-payment. Please refer to instructions in your order confirmationemail and proforma invoice. Your product is not yet in stock. Ship / pickup date is not confirmed.,2023-Oct-18,2023-Oct-18,UPS,X
+251944,2023-Oct-24,Your order is in stock. Ship date is confirmed.,2023-Oct-23,2023-Oct-24,Dempsey,X
+251945,To be confirmed,Your order requires prepayment. Please refer to instructions in your order confirmationemail and proforma invoice. Ship / pickup date is not confirmed.,2023-Oct-18,2023-Dec-12,Customer Pickup,X
