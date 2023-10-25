@@ -144,7 +144,7 @@ BL,SHIP_DATE,STATUS,RECEIVED_DATE_cst,DESC1,shipvia,PRT
 250190,2023-Oct-23,Your order was shipped on 2023-Nov-02. You will receive an invoice shortly.,2023-Aug-15,2023-Oct-18,Customer Pickup,1
 250211,2023-Oct-17,Your order was shipped on 2023-Nov-02. You will receive an invoice shortly.,,2023-Oct-23,ABF FREIGHT,2
 250120,To be confirmed,"As per your instructions, we have placed this order on hold. Please contact customerservice@dempseycorporation.com if you wish to release the order.",2023-Aug-10,2023-Oct-03,Dempsey,1
-250226,To be confirmed,Your order is not yet in stock. Customer service will advise once product has been received. Ship date is not confirmed.,2023-Aug-17,2023-Aug-17,Customer Pickup,1
+250226,2023-Oct-30,Your order is in stock. Ship date is confirmed.,2023-Aug-17,2023-Aug-17,Customer Pickup,1
 250197,To be confirmed,Your order has been cancelled.,2023-Aug-15,2023-Dec-06,PROCTERS,
 250005,To be confirmed,We require your approval prior to confirming the ship date for your order. Please replyto the email Customer Service sent you or contact us at customerservice@dempseycorporation.com if you have not received an email regarding this order.,2023-Aug-04,2023-Sep-29,POM,1
 250276,2023-Oct-18,Your order was shipped on 2023-Nov-02. You will receive an invoice shortly.,2023-Aug-18,2023-Aug-25,Customer Pickup,1
@@ -303,7 +303,7 @@ BL,SHIP_DATE,STATUS,RECEIVED_DATE_cst,DESC1,shipvia,PRT
 251048,2023-Oct-12,Your order was shipped on 2023-Nov-02. You will receive an invoice shortly.,2023-Sep-01,2023-Sep-06,BOURRET,1
 251084,To be confirmed,Your order is not yet in stock. Customer service will advise once product has been received. Ship date is not confirmed.,2023-Sep-18,2023-Dec-01,TRANSPORT BOURASSA,1
 251085,To be confirmed,One or more products on your order are not yet in stock. Customer Service will advise if we are unable to meet your requested ship date.,2023-Sep-18,2023-Nov-10,Customer Pickup,1
-251087,2023-Nov-01,Your order has been received by our distribution centre. Ship date is confirmed.,2023-Sep-19,2023-Nov-01,Customer Pickup,1
+251087,2023-Nov-01,Your order has been received by our distribution centre. Ship date is confirmed.,2023-Sep-19,2023-Nov-01,Customer Pickup,2
 250827,2023-Oct-20,Your order was shipped on 2023-Nov-02. You will receive an invoice shortly.,2023-Sep-01,2023-Oct-23,PROCTERS,2
 250828,To be confirmed,Your order is not yet in stock. Customer service will advise once product has been received. Ship date is not confirmed.,2023-Sep-05,2023-Nov-23,Customer Pickup,
 250901,2023-Oct-24,Your order was shipped on 2023-Nov-02. You will receive an invoice shortly.,2023-Sep-06,2023-Oct-25,BOURRET,1
@@ -583,7 +583,7 @@ BL,SHIP_DATE,STATUS,RECEIVED_DATE_cst,DESC1,shipvia,PRT
 251381,2023-Nov-10,Your order is in stock. Ship date is confirmed.,2023-Sep-27,2023-Nov-10,Dempsey,1
 251367,2023-Oct-16,Your order was shipped on 2023-Nov-02. You will receive an invoice shortly.,2023-Sep-22,2023-Sep-21,PROCTERS,2
 251369,2023-Oct-05,Your order was shipped on 2023-Nov-02. You will receive an invoice shortly.,2023-Sep-21,2023-Sep-28,VITRAN,1
-251488,To be confirmed,Your order is not yet in stock. Customer service will advise once product has been received. Ship date is not confirmed.,2023-Sep-28,2023-Oct-04,APPS CARTAGE INC,1
+251488,2023-Oct-27,Your order is in stock. Ship date is confirmed.,2023-Sep-28,2023-Oct-04,APPS CARTAGE INC,1
 251489,2023-Oct-12,Your order was shipped on 2023-Nov-02. You will receive an invoice shortly.,2023-Oct-03,2023-Oct-10,Dempsey,1
 251532,To be confirmed,Your order is not yet in stock. Customer service will advise once product has been received. Ship date is not confirmed.,2023-Oct-03,2023-Nov-08,POM - 1 - BASIC,X
 251533,2023-Oct-27,Your order has been received by our distribution centre. Ship date is confirmed.,2023-Oct-04,2023-Oct-30,BOURRET,1
@@ -645,7 +645,7 @@ BL,SHIP_DATE,STATUS,RECEIVED_DATE_cst,DESC1,shipvia,PRT
 251314,2023-Nov-06,Your order is in stock. Ship date is confirmed.,2023-Sep-25,2023-Nov-06,Customer Pickup,1
 251315,2023-Nov-13,Your order is in stock. Ship date is confirmed.,2023-Sep-25,2023-Nov-13,Customer Pickup,1
 251378,2023-Oct-17,Your order was shipped on 2023-Nov-02. You will receive an invoice shortly.,2023-Sep-27,2023-Oct-03,Dempsey,1
-251379,To be confirmed,Your order is not yet in stock. Customer service will advise once product has been received. Ship date is not confirmed.,2023-Sep-27,2023-Sep-29,PROCTERS,1
+251379,2023-Oct-26,Your order is in stock. Ship date is confirmed.,2023-Sep-27,2023-Sep-29,PROCTERS,1
 251380,2023-Oct-24,Your order was shipped on 2023-Nov-02. You will receive an invoice shortly.,2023-Sep-27,2023-Oct-24,Dempsey,1
 251499,2023-Nov-16,Your order is in stock. Ship date is confirmed.,2023-Oct-03,2023-Nov-17,PROCTERS,1
 251500,2023-Oct-23,Your order is in stock. Ship date is confirmed.,2023-Oct-03,2023-Oct-30,SLINGSHOT,1
@@ -740,7 +740,7 @@ BL,SHIP_DATE,STATUS,RECEIVED_DATE_cst,DESC1,shipvia,PRT
 251776,2023-Oct-16,Your order was shipped on 2023-Nov-02. You will receive an invoice shortly.,2023-Sep-13,2023-Oct-06,ALTERNATIVE CARTAGE,1
 251777,To be confirmed,Your order requires prepayment. Please refer to instructions in your order confirmationemail and proforma invoice. Ship / pickup date is not confirmed.,2023-Oct-12,2023-Oct-18,Dempsey,X
 251778,To be confirmed,Your order is not yet in stock. Customer service will advise once product has been received. Ship date is not confirmed.,2023-Oct-13,2024-Jan-15,Customer Pickup,
-251817,To be confirmed,Your order is not yet in stock. Customer service will advise once product has been received. Ship date is not confirmed.,2023-Oct-16,2023-Oct-04,PROCTERS,
+251817,2023-Oct-26,Your order is in stock. Ship date is confirmed.,2023-Oct-16,2023-Oct-04,PROCTERS,
 251818,To be confirmed,Your order is not yet in stock. Customer service will advise once product has been received. Ship date is not confirmed.,2023-Oct-17,2023-Nov-15,Dempsey,
 251819,To be confirmed,Your order is not yet in stock. Customer service will advise once product has been received. Ship date is not confirmed.,2023-Oct-17,2023-Nov-22,Dempsey,
 251820,To be confirmed,Your order is not yet in stock. Customer service will advise once product has been received. Ship date is not confirmed.,2023-Oct-17,2023-Dec-06,Dempsey,
@@ -937,6 +937,7 @@ BL,SHIP_DATE,STATUS,RECEIVED_DATE_cst,DESC1,shipvia,PRT
 251991,To be confirmed,,,,BOURRET,1
 251992,2023-Oct-27,Your order is in stock. Ship date is confirmed.,2023-Oct-23,2023-Oct-30,LABRANCHE,
 252062,To be confirmed,Your order requires pre-payment. Please refer to instructions in your order confirmationemail and proforma invoice. Your product is not yet in stock. Ship / pickup date is not confirmed.,2023-Oct-24,2023-Dec-07,Customer Pickup,X
+252064,2023-Oct-27,Your order is in stock. Ship date is confirmed.,,2023-Oct-27,Customer Pickup,
 251739,2023-Nov-20,Your order is in stock. Ship date is confirmed.,2023-Oct-12,2023-Nov-21,POLARIS,
 251740,2023-Oct-23,Your order was shipped on 2023-Nov-02. You will receive an invoice shortly.,2023-Oct-12,2023-Oct-18,POLARIS,1
 251741,To be confirmed,One or more products on your order are not yet in stock. Customer Service will advise if we are unable to meet your requested ship date.,2023-Oct-12,2023-Nov-07,Customer Pickup,
