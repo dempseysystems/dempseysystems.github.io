@@ -54,7 +54,7 @@ BL,SHIP_DATE,STATUS,RECEIVED_DATE_cst,DESC1,shipvia,PRT
 56906,2023-Oct-19,Your order was picked up on 2023-Nov-06. You will receive an invoice shortly.,2023-Sep-21,2023-Oct-26,FEDEX FRT PRIORITY,2
 56921,To be confirmed,"Our distribution centre has advised that your order has not yet been picked up. Please arrange pickup as per the instructions sent to you by Customer Service. If you have not received your confirmation email, please contact customerservice@dempseycorporation.com",2023-Sep-21,2023-Sep-20,Customer Pickup,1
 56923,2023-Oct-19,Your order was picked up on 2023-Nov-06. You will receive an invoice shortly.,2023-Sep-19,2023-Oct-19,Customer Pickup,1
-56950,To be confirmed,One or more products on your order are not yet in stock. Customer Service will advise if we are unable to meet your requested pickup date.,2023-Sep-25,2023-Nov-07,Customer Pickup,1
+56950,2023-Nov-07,Your order is in stock. Pickup date is confirmed.,2023-Sep-25,2023-Nov-07,Customer Pickup,2
 56951,2023-Nov-03,Your order is in stock. Pickup date is confirmed.,2023-Sep-28,2023-Oct-26,Dempsey,1
 56954,To be confirmed,One or more products on your order are not yet in stock. Customer Service will advise if we are unable to meet your requested pickup date.,2023-Sep-25,2023-Oct-25,ECHO GLOBAL LOGISTICS,X
 56955,2023-Oct-23,Your order was picked up on 2023-Nov-06. You will receive an invoice shortly.,2023-Sep-25,2023-Oct-27,DEMPSEY,2
@@ -235,7 +235,8 @@ BL,SHIP_DATE,STATUS,RECEIVED_DATE_cst,DESC1,shipvia,PRT
 57177,2023-Nov-02,Your order has been received by our distribution centre. Pickup date is confirmed.,2023-Oct-18,2023-Nov-01,XPO Logistics,2
 57178,To be confirmed,Your order is not yet in stock. Customer service will advise once product has been received. Pickup date is not confirmed.,2023-Oct-16,2023-Nov-03,ARCH LOGISTICS,1
 57179,2023-Nov-29,Your order is in stock. Pickup date is confirmed.,2023-Oct-19,2023-Dec-02,Customer Pickup,
-57227,2023-Nov-03,Your order is in stock. Pickup date is confirmed.,2023-Oct-26,2023-Nov-01,Customer Pickup,
+57227,2023-Nov-03,Your order is in stock. Pickup date is confirmed.,2023-Oct-26,2023-Nov-01,Customer Pickup,1
+57228,To be confirmed,One or more products on your order are not yet in stock. Customer Service will advise if we are unable to meet your requested pickup date.,2023-Oct-25,2023-Nov-21,Customer Pickup,
 57180,2023-Nov-08,Your order has been received by our distribution centre. Pickup date is confirmed.,2023-Oct-19,2023-Nov-15,UPS FREIGHT,1
 57181,To be confirmed,Your order is not yet in stock. Customer service will advise once product has been received. Pickup date is not confirmed.,2023-Oct-05,2023-Nov-09,FEDEX FRT PRIORITY,
 57182,To be confirmed,Your order has been cancelled.,2023-Oct-20,2023-Nov-13,Dempsey,
